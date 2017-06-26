@@ -11,7 +11,7 @@ and open the template in the editor.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       div {
-        float: left;
+        float: left !important;
         border: 1px solid #008;
         width: 49%;
         font-size: 1.5em;
@@ -27,21 +27,28 @@ and open the template in the editor.
         height: 400px;
         background-color: blanchedalmond;
       }
+      .painted {
+        background-color: #ccc;
+      }
+      .float-right .painted {
+        background-color: aquamarine;
+      }
     </style>
   </head>
   <body>
-    <div>Static block</div>
-    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
-    <div>Static block</div>
-    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
-    <div>Static block</div>
-    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
-    <div>Static block</div>
-    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
-    <div>Static block</div>
-    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
-    <div>Static block</div>
-    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
     <div class="chat">......</div>
+    <div>Static block</div>
+    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
+    <div>Static block</div>
+    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
+    <div>Static block</div>
+    <div class="float-right">Static <span class="painted">block</span> Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
+    <div class="painted">Static block</div>
+    <div class="float-right painted">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
+    <div>Static block</div>
+    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
+    <div>Static block</div>
+    <div class="float-right">Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block Huge Static block</div>
+    
   </body>
 </html>
