@@ -31,7 +31,7 @@ nav {
   line-height: 50px;
   text-align: center;
 }
-nav a {
+nav a, nav span {
   position: relative;
   padding: 10px 25px;
   text-transform: uppercase;
@@ -42,7 +42,7 @@ nav div.dropdown {
   position: relative;
   display: inline-block;
 }
-nav div.dropdown:hover .menu-content {
+nav div.dropdown .menu-content.menu-content--show {
   display:block;
 }
 
