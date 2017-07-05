@@ -1,0 +1,26 @@
+ul.navbar-modify {
+  border-bottom: 5px solid palegoldenrod;
+}
+
+ul.navbar-modify li {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #f8efc0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+ul.navbar-modify li.active {
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+ul.navbar-modify li a {
+  color: #444;
+}
+
+ul.navbar-modify li.active a,
+ul.navbar-modify li.active a:focus,
+ul.navbar-modify li.active {
+  background-color: palegoldenrod;
+}
