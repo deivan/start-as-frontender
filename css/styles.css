@@ -1,27 +1,192 @@
 ul.navbar-modify {
-  border-bottom: 5px solid palegoldenrod;
+  border-bottom: 5px solid #DACEB8;
   margin-bottom: 10px;
+  margin-top: 10px;
+  
 }
 
 ul.navbar-modify li {
+  width: 150px;  
   margin-right: 5px;
   margin-bottom: 5px;
-  background-color: #f8efc0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background-color: #E4E0D5;
+  
 }
 
-ul.navbar-modify li.active {
+ul.navbar-modify li.active,a {
   padding-bottom: 5px;
   margin-bottom: 0px;
+  border: none;
+}
+ul.navbar-modify li.active a{
+   align-content: center; 
 }
 
-ul.navbar-modify li a {
-  color: #444;
-}
 
 ul.navbar-modify li.active a,
+ul.navbar-modify li.active.a:focus,
 ul.navbar-modify li.active a:focus,
 ul.navbar-modify li.active {
-  background-color: palegoldenrod;
+  background-color: #DACEB8;
+}
+
+
+
+.select{
+    border-radius: 0px;
+    width: 15%;
+}
+
+ .my-row{
+     float: left;
+}
+.navbar.navbar-line{
+    padding: 5px; 
+    margin-top: -5px; 
+    border-radius: 0px;
+    height: 45px;
+             
+    background-color: #DACEB8;
+    margin-bottom: 20px; 
+}
+.navbar.navbar-line p{    
+   line-height: 45px;
+   padding-right: 10px;
+   padding-left: 10px;
+}
+
+table.table-condensed.table-modify tr th{
+    border-top: none;
+   border-bottom: 1px dashed #ddd; 
+}
+table.table-condensed.table-modify tr td{
+    border-top: none;
+    border-bottom: 1px solid #ddd; 
+}
+
+.navbar navbar-line{    
+    display: inline-block;   
+}
+.navbar.navbar-line .type{
+    padding-left: 5px;    
+}
+.navbar.navbar-line .date{
+  padding-left: 50px;   
+}
+.active a{
+    border: none;
+}
+
+.card {
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 600px;
+    padding: 5px;
+}
+.my-panel-heading{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: none;
+    border: none;
+    background-color: #DACEB8;
+    height:100px;
+    line-height: 150px;
+}
+span.card-name{
+   padding-left: 220px; 
+}
+.panel.my-panel-heading{
+ height:50px;
+}
+
+.glyphicon.glyphicon-pencil{
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 900;    
+    padding: 6px;
+    float: right;
+    border: 2px solid #444;
+    border-radius: 50%;
+}
+.glyphicon-plus{
+    border-radius: 50%;
+    padding: 0px 0px;
+    border: 3px solid #444;
+    color: #555;
+    font-size: 30px;
+    font-weight: 100;
+ 
+}
+.panel-body-img{
+    position: relative;
+    margin-left: 90px;
+    margin-top: -90px;    
+    height:100px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%; 
+}
+table{
+   
+}
+table td.my-table{       
+       padding: 10px 100px; 
+}
+.my-tr{
+    font-weight: 500;
+}
+.col1{
+    font-weight: 500;
+    color: #aaa;
+    width: 120px;
+}
+.btn{
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #444;
+    color:#444;
+}
+.btn-plus{    
+    padding-left: 25px;
+    font-weight: 500;    
+    font-size: 18px;
+}
+button.btn-pls{
+    padding: 0px 10px;
+    font-size: 32px;
+    border: 2px solid #444;
+    border-radius: 50%;
+    background-color: #aaa;
+}
+.panel-body.my-panel-body{
+    background-color: #ccc;
+}
+.icon-plus{
+ padding: 2px 1px 0px 1px;
+ color:#ccc;
+ background-color: #444;
+ margin-bottom: 20px;
+}
+a.icon-plus{
+    margin-top: 0px; 
+    margin-left: 20px; 
+    border: 2px solid #444;
+    border-radius: 50%;
+font-size: 28px;
+font-weight: 300;
+}
+.bot-line{
+    margin-left: 10px;
+    
+}
+.glyphicon.glyphicon-credit-card{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.link{
+    line-height: 28px;
+    margin-left: 40px;
 }

@@ -11,55 +11,90 @@
   </head>
 
   <body>
-
-
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-9 col-sm-9">
+        <div class="col-md-9 col-sm-9 col-lg-9">
           <!-- Nav tabs -->
         <ul class="nav nav-tabs navbar-modify" role="tablist" id="myTabs">
-          <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">Home</a></li>
-          <li role="presentation"><a href="#courier" aria-controls="courier" role="tab" data-toggle="tab">Profile</a></li>
-          <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Messages</a></li>
-          <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Settings</a></li>
+          <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">Account Info</a></li>
+          <li role="presentation"><a href="#courier" aria-controls="courier" role="tab" data-toggle="tab">Courier Info</a></li>
+          <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">History</a></li>
+          <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Billing</a></li>
         </ul>
 
         <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="account">111</div>
+        
+      <div class="tab-content">
+         <div role="tabpanel" class="tab-pane active" id="account">
+             <div class="card col-lg-12">
+                 <div class="panel ">
+                    <div class="my-panel-heading"><span class="card-name ">George Markovitch</span><span class="glyphicon glyphicon-pencil" aria-hidden="true"></div>
+                        <div class="panel-body">
+                            <table class="">
+                                <tr><td class=""><img class="panel-body-img " src="avatar-200x200-2074.gif" alt="Аватарка"></td><td class="col1">ID</td><td class="my-tr">1004563</td></tr> 
+                                <tr class=""><td class="my-table">&nbsp;</td><td class="col1">Status</td><td class="my-tr">Active</td></tr>
+                                <tr class=""><td class="my-table">&nbsp;</td><td class="col1">First Name</td><td class="my-tr">Company Name</td></tr>
+                                <tr class=""><td class="my-table">&nbsp;</td><td class="col1">Company Email</td><td class="my-tr">George@company.com</td></tr>
+                                <tr class=""><td class="my-table">&nbsp;</td><td class="col1">Mobile</td><td class="my-tr">+972-54-8283342</td></tr>
+                                <tr class=""><td class="my-table">&nbsp;</td><td class="col1"><button type="button" class="btn">Reset Password</button></td><td class="my-tr"></td></tr>
+                            </table>
+                        </div>
+                 <div class="panel">
+                    <div class="panel-body my-panel-body">
+                        <div><span class="btn-plus">Payment Method</span> <a class="glyphicon glyphicon-plus-sign icon-plus"></a></div>
+                        <div><i class="glyphicon glyphicon-credit-card font-modify" aria-hidden="true"></i><span class="bot-line">****1234</span><span><a class="link" href="#"> Remove </a>| Set as Primary</span></div>
+                    </div>
+                </div>
+                </div>
+             </div>             
+         </div>
           <div role="tabpanel" class="tab-pane" id="courier">222</div>
           <div role="tabpanel" class="tab-pane" id="history">333</div>
-          <div role="tabpanel" class="tab-pane" id="billing">
-            <div class="col-md-12 col-sm-12">
-              <table class="table table-striped">
+           <div role="tabpanel" class="tab-pane" id="billing">            
+                    <div class="navbar navbar-line col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                                <p class="my-row">Type</p>
+                                <select class="form-control select my-row ">
+                                    <option>All</option> 
+                                </select>          
+                                <p class=" my-row ">Year</p>
+                                <select class="form-control select my-row">
+                                    <option>All</option> 
+                                </select>
+                                <p class=" my-row ">Month</p>
+                                <select class="form-control select my-row ">
+                                    <option>All</option> 
+                                </select>
+                    </div>
+              <table class="table table-condensed table-modify ">
                 <tr>
-                  <th>Invoise No</th>
-                  <th>Date</th>
-                  <th>Type</th>
-                  <th>Amount</th>
-                  <th></th>
+                  <th class="col-md-2 ">Invoise No</th>
+                  <th class="col-md-2 ">Date</th>
+                  <th class="col-md-2">Type</th>
+                  <th class="col-md-2">Amount</th>
+                  <th class="col-md-4"></th>
                 </tr>
-                <tr>
-                  <td>1111101</td>
+                    <tr>
+                  <td><a href="#">1111101</a></td>
                   <td>05/07/2017</td>
                   <td>Unpaid</td>
                   <td>$12</td>
                   <td><a href="#">view details</a></td>
                 </tr>
                 <tr>
-                  <td>11111100</td>
+                    <td><a href="#">11111100</a></td>
                   <td>01/07/2017</td>
                   <td>Paid</td>
                   <td>$23</td>
                   <td><a href="#">view details</a></td>
                 </tr>
               </table>
-            </div>
-          </div>
+            </div>      
         </div>
         </div>
       </div>
-    </div>
+        </div>
+        
+     
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
@@ -69,6 +104,7 @@
       $(this).tab('show');
     });
   });
+
 </script>
   </body>
 </html>
