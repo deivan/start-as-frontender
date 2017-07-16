@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO supply a title</title>
+    <title>Let's play a game</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <div class="main-vidget" id="app-core"></div>
-    <script src="app.js"></script>
+    <div class="main-app">
+      <div class="minigames__cr">
+        <div class="minigames__cr--title">
+          Who will win this race?  
+        </div>
+        <div class="minigames__cr--content">
+          <div class="minigames__cr--line">
+            <div class="minigames__cr--number">1</div>
+            <input type="radio" value="1" name="bugs" id="bet-1" />
+            <div class="minigames__cr--bug" id="bug-1"></div>
+          </div>
+          <div class="minigames__cr--line">
+            <div class="minigames__cr--number">2</div>
+            <input type="radio" value="2" name="bugs" id="bet-2" />
+            <div class="minigames__cr--bug" id="bug-2"></div>
+          </div>
+          <div class="minigames__cr--line">
+            <div class="minigames__cr--number">3</div>
+            <input type="radio" value="3" name="bugs" id="bet-3" />
+            <div class="minigames__cr--bug" id="bug-3"></div>
+          </div>
+        </div>
+        <div class="minigames__cr--buttons">
+          <span>Select your bet: </span>
+          <select id="bet">
+            <option value="1">1 coin</option>
+            <option value="3">3 coins</option>
+            <option value="5">5 coins</option>
+            <option value="10">10 coins</option>
+            <option value="20">20 coins</option>
+            <option value="50">50 coins</option>
+          </select>
+          <a class="minigames__cr--button" href="#">Let's Play!</a>
+          <a class="minigames__cr--button" href="#">Reset</a>
+        </div>
+        <div class="minigames__cr--result" id="reults">
+          <div class="winner" id="result-win">You are winner!</div>
+          <div class="looser" id="result-loose">You are looser!</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,59 +1,161 @@
 body {
-  padding: 0;
-  margin: 0;
-  background-color: navy;
-  color: #000;
-  font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-size: 15px;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.main-vidget{
-  width: 550px;
+.main-app {
+  width:600px;
   height: 400px;
-  position: relative;
-  margin: 50px auto;
-  border-radius: 10px;
   background-color: #fff;
+  margin:20px auto;
+  border-radius: 10px;
 }
 
-.className {
-  color:red;
-  padding: 10px 30px;
-  display:inline-block;
+.modal-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
 }
 
-.image {
-  width: 250px;
-  height: 250px;
-  float: left;
-  margin-top: 20px;
-  margin-left: 20px;
+.modal-loading div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -85px;
+  font-size: 40px;
+  color: #ff0;
+  text-align: center;
+  animation: fadeing .7s;
+  animation-iteration-count:infinite;
 }
 
-.price {
-  display: inline-block;
-  float: left;
-  margin-left: 20px;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 36px;
-  font-weight: 900;
-  color: red;
+@keyframes fadeing {
+    0% { opacity: 0; }
+    50%   { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+.minigames__cr {
+  position: relative;
+  width: 600px;
+  height:400px;
+  background-color:#eee;
+  border-radius:10px;
+}
+
+.minigames__cr--title {
+  position: absolute;
+  width:100%;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  left:0;
+  top:20px;
+  font-size: 24px;
+  color: #009;
+}
+
+.minigames__cr--content {
+  position: absolute;
+  left:30px;
+  top: 60px;
+  height:300px;
+  width: 550px;
+  border: 1px dashed #004;
+}
+
+.minigames__cr--line {
+  position:relative;
+  width: 100%;
+  height: 33%;
+  background-image: url('line_bg.png');
+  background-repeat: repeat-x;
+  background-position-y: center;
+}
+
+.minigames__cr--line + .minigames__cr--line {
+  border-top: 1px solid #444;
+}
+
+.minigames__cr--line input {
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+}
+
+.minigames__cr--buttons {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: 10px;
+  line-height: 20px;
   text-align: center;
 }
 
-.content {
-  width: 250px;
+.minigames__cr--button {
+  padding: 5px 15px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  margin-left: 10px;
+  text-decoration: none;
+  border: 1px solid #444;
+}
+
+.minigames__cr--bug {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 144px;
+  background-image: url(spiderx.gif);
+}
+
+.minigames__cr--number {
+  position: absolute;
+  width: 20px;
+  height: 28px;
+  left: -24px;
+  top: 0;
+  color: #f00;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.minigames__cr--result {
+  display:none;
+  position: absolute;
+  width: 100%;
   height: 360px;
-  float: right;
-  border: 1px dotted #888;
+  background-color: rgba(255,255,255,0.7);
+}
+.minigames__cr--result div {
+  position: absolute;
+  top: 48%;
+  width: 100%;
+  text-align:center;
+  font-size: 56px;
+}
+.minigames__cr--result div.winner {
+  color: #080;
 }
 
-.content ul {
-  width:100%;
-  color: #888;
+.minigames__cr--result div.looser {
+  color: #800;
 }
 
-.content ul li {
-  
+minigames__cr--message {
+  color: #f00;
 }
