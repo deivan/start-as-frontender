@@ -1,23 +1,42 @@
 window.onload = () => {
   console.log('loaded');
-  const jv = new JustVidget('app-core');
+  const jv = new JustVidget({
+    id: 'app-core',
+    price: '$10',
+    image: '',
+    strings: ['efef  efefe', 'efeg thrth wefwefg', 'eergerg gerger ergergr egrgerg']
+  }),
+  a1 = new JustVidget({
+    id: 'app-core-a',
+    price: '$50',
+    image: '',
+    strings: ['edvdv fefd vdvd  efefe', 'th wef wefg', 'eer rg gerger ergergr egrgerg']
+  }),
+  a2 = new JustVidget({
+    id: 'app-core-b',
+    price: '$99',
+    image: '',
+    strings: ['efef  efefe', 'efeg thrth wefwefg', 'eergerg gerger ergergr egrgerg']
+  });
 };
 
 class JustVidget {
-  constructor (id) {
+  constructor (config) {
     console.log('class created');
-    this.container = document.getElementById(id);
-    this.strings = ['grggrg rgrgrg wew', 'tghrth tyjty wef', 'ggrg rgrg', 'rgrg thtyjtyj','gjtj dhgh ere'];
+    this.container = document.getElementById(config.id);
+    this.strings = config.strings;
+    this.price = config.price;
+    this.image = config.image;
     this.prepareBase();
   }
   
   prepareBase () {
     this.components = {
       image: this.makeElement('img','','image'),
-      price: this.makeElement('span','$999','price'),
+      price: this.makeElement('span', this.price,'price'),
       content: this.makeElement('div', '', 'content')
     };
-    this.components.image.src = 'https://www.google.com.ua/logos/doodles/2017/eiko-ishiokas-79th-birthday-5647813982552064-s.png';
+    this.components.image.src = this.image;
     this.container.appendChild(this.components.image);
     this.container.appendChild(this.components.content);
     this.container.appendChild(this.components.price);
