@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Starter Template for Bootstrap</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -25,7 +26,7 @@
         <!-- Tab panes -->
         
       <div class="tab-content">
-         <div role="tabpanel" class="tab-pane active" id="account">
+       <div role="tabpanel" class="tab-pane active" id="account">
              <div class="card col-lg-12">
                  <div class="panel ">
                     <div class="my-panel-heading"><span class="card-name ">George Markovitch</span><span class="glyphicon glyphicon-pencil" aria-hidden="true"></div>
@@ -48,9 +49,55 @@
                 </div>
              </div>             
          </div>
-          <div role="tabpanel" class="tab-pane" id="courier">222</div>
-          <div role="tabpanel" class="tab-pane" id="history">333</div>
-           <div role="tabpanel" class="tab-pane" id="billing">            
+       <div role="tabpanel" class="tab-pane" id="courier">
+           <div class="row row_status">
+               <span class="row_status">Status:</span>
+               <span>Active</span>
+           </div>
+           <div class="panel driver_licence ">
+               <div class="panel-body">
+                   <div class="dl-panel-heading"><i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i><span class="">Driver licence</span><span class="glyphicon glyphicon-pencil pen" aria-hidden="true"></div>
+               </div>
+                <div class="panel">
+                    <div class="panel-body dl-panel-body">
+               <table class="">
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">ID</td><td class="my-tr-dl">1004563</td></tr>
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">Issued</td><td class="my-tr-dl">09/30/2008</td></tr>
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">Expires</td><td class="my-tr-dl">10/10/2017</td></tr>
+                                
+                </table>
+                        <button type="button" class="btn-dl">View Scan</button>
+                    </div></div>
+           </div>
+                      <div class="panel driver_licence ">
+               <div class="panel-body">
+                   <div class="dl-panel-heading"><i class="fa fa-car fa-lg" aria-hidden="true"></i><span class="">Driver licence</span><span class="glyphicon glyphicon-pencil pen" aria-hidden="true"></div>
+               </div>
+                <div class="panel">
+                    <div class="panel-body dl-panel-body">
+               <table class="">
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">ID</td><td class="my-tr-dl">1004563</td></tr>
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">Issued</td><td class="my-tr-dl">09/30/2008</td></tr>
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">Expires</td><td class="my-tr-dl">10/10/2017</td></tr>
+                </table>
+                    </div></div>
+           </div>
+                      <div class="panel driver_licence ">
+               <div class="panel-body">
+                   <div class="dl-panel-heading"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i><span class="">Driver licence</span><span class="glyphicon glyphicon-pencil pen" aria-hidden="true"></div>
+               </div>
+                <div class="panel">
+                    <div class="panel-body dl-panel-body">
+               <table class="">
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">ID</td><td class="my-tr-dl">1004563</td></tr>
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">Issued</td><td class="my-tr-dl">09/30/2008</td></tr>
+                                <tr class=""><td class="my-table-dl">&nbsp;</td><td class="col1-dl">Expires</td><td class="my-tr-dl">10/10/2017</td></tr>
+                </table>
+                    </div></div>
+           </div>
+       </div>
+          <div role="tabpanel" class="tab-pane" id="history"></div>
+          <div role="tabpanel" class="tab-pane" id="billing">            
                     <div class="navbar navbar-line col-md-12 col-sm-12 col-lg-12 col-xs-12">
                                 <p class="my-row">Type</p>
                                 <select class="form-control select my-row ">
@@ -88,7 +135,7 @@
                   <td><a href="#">view details</a></td>
                 </tr>
               </table>
-            </div>      
+            </div>    
         </div>
         </div>
       </div>

@@ -130,21 +130,41 @@ span.card-name{
 table{
    
 }
+
 table td.my-table{       
        padding: 10px 100px; 
 }
+/*table td.my-table-dl{       
+       width: 100px; 
+}*/
 .my-tr{
     font-weight: 500;
 }
+
 .col1{
     font-weight: 500;
     color: #aaa;
     width: 120px;
 }
+.col1-dl{
+    padding: 5px 35px;
+    font-weight: 500;
+    color: #aaa;
+    width: 50px;
+}
 .btn{
     font-weight: 400;
     background-color: #fff;
     border: 1px solid #444;
+    color:#444;
+}
+.btn-dl{
+    margin-top: 10px;
+    margin-left: 40px;
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
     color:#444;
 }
 .btn-plus{    
@@ -162,6 +182,13 @@ button.btn-pls{
 .panel-body.my-panel-body{
     background-color: #ccc;
 }
+.panel-body.dl-panel-body{
+    
+    height: 280px;
+    padding-top: 40px;
+    background-color:#ddd;
+}
+
 .icon-plus{
  padding: 2px 1px 0px 1px;
  color:#ccc;
@@ -189,4 +216,70 @@ font-weight: 300;
 .link{
     line-height: 28px;
     margin-left: 40px;
+}
+span.row_status{
+    margin-left: 15px;
+    margin-right: 5px;
+    color:#ccc;
+}
+.panel-body{
+    padding: 0px;
+}
+.panel.driver_licence{
+    
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 280px;
+    height: 370px;        
+}
+.glyphicon.glyphicon-pencil.pen{
+    display: none;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+.panel.driver_licence:active{
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    
+}
+.panel.driver_licence:active .glyphicon.glyphicon-pencil.pen {
+    display: block;
+      
+}
+.dl-panel-heading{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: none;
+    border: none;
+    background-color: #DACEB8;
+    height:90px;
+    line-height: 150px;
+
+}
+.fa-address-card-o{
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 2px #777 solid;
+    border-radius: 50%;    
+    padding: 22px 19px;    
+}
+.fa-file-text-o{
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 2px #777 solid;
+    border-radius: 50%;    
+    padding: 22px 19px;    
+}
+.fa-car{
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 2px #777 solid;
+    border-radius: 50%;    
+    padding: 22px 19px;    
+}
+.panel{
+    border: none;
 }
