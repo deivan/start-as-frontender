@@ -32,7 +32,7 @@ class CrazyRace {
     console.log('start', this);
     
     self.getBetNumber();
-    self.runGame();
+
   }
   
   clickReset (e) {
@@ -48,6 +48,7 @@ class CrazyRace {
       alert('Choose the line!');
       return;
     }
+    this.runGame();
   }
   
   runGame () {
@@ -58,24 +59,22 @@ class CrazyRace {
           getSpeed()
         ];
     
-    setTimeout(()=> {
-      getStep();
-    }, 100);
+    getStep();
     
     function getSpeed () {
       return Math.random()*10 +1;
     }
     
     function getStep () {
-      console.log(self.bugs)
       self.bugs.map( (bug, index) => {
+        console.log(bug.id, bug.style.left, parseFloat(bug.style.left), speeds[index]);
         let x = parseFloat(bug.style.left);
         x += speeds[index];
         bug.style.left = x + 'px';
       });
-      setTimeout(()=> {
-        getStep();
-      }, 100);
+//      setTimeout(()=> {
+//        getStep();
+//      }, 1000);
     }
     
   }
