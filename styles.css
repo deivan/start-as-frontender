@@ -159,3 +159,7 @@ body {
 minigames__cr--message {
   color: #f00;
 }
+
+.hidden {
+  display: none;
+}
