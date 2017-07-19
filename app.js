@@ -17,6 +17,15 @@ class CrazyRace {
       document.getElementById('bug-2'),
       document.getElementById('bug-3')
     ];
+    this.selector = document.getElementById('bet');
+    this.buttonPlay = document.getElementById('buttonStart');
+    this.buttonStop = document.getElementById('buttonReset');
+    this.ui = [this.radio[0], this.radio[1],this.radio[2], this.selector, this.buttonPlay, this.buttonStop];
+    
+    this.cash = !!window.localStorage.getItem('cash') 
+                ? 1 * window.localStorage.getItem('cash') 
+                : 100;
+    document.getElementById('cash').innerText = this.cash;
   }
   
   addClick (elementId, refLink) {
@@ -35,9 +44,13 @@ class CrazyRace {
 
   }
   
-  clickReset (e) {
-    console.log('cancel');
-    
+  clickReset (self) {
+    console.log('cancel',self);
+    document.getElementById('results').style.display = 'none';
+    self.buttonPlay.classList.remove('disabled');
+    self.bugs.map( (bug) => {
+      bug.style.left = '0px';
+    });
   }
   
   getBetNumber () {
@@ -58,7 +71,7 @@ class CrazyRace {
           getSpeed(),
           getSpeed()
         ];
-    
+    this.prepareUI(false);
     getStep();
     
     function getSpeed () {
@@ -96,6 +109,16 @@ class CrazyRace {
       win.classList.add('hidden');
       loo.classList.remove('hidden');
     }
+    this.prepareUI(true);
+    this.buttonPlay.classList.add('disabled');
+  }
+  
+  prepareUI (state) {
+    this.ui.map( (item) => {
+      state 
+        ? item.classList.remove('disabled')
+        : item.classList.add('disabled');
+    });
   }
 }
   

@@ -163,3 +163,8 @@ minigames__cr--message {
 .hidden {
   display: none;
 }
+
+.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
