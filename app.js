@@ -99,15 +99,14 @@ class CrazyRace {
     
     if (winner == this.selectedNumber) {
       this.cash += parseFloat(this.selector.value);
-      this.updateCash();
       win.classList.remove('hidden');
       loo.classList.add('hidden');
     } else {
       this.cash -= parseFloat(this.selector.value);
-      this.updateCash();
       win.classList.add('hidden');
       loo.classList.remove('hidden');
     }
+    this.updateCash();
     this.prepareUI(true);
     this.buttonPlay.classList.add('disabled');
   }
