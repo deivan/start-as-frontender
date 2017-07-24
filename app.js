@@ -37,15 +37,10 @@ class CrazyRace {
   }
   
   clickStart (self) {
-    
-    console.log('start', this);
-    
     self.getBetNumber();
-
   }
   
   clickReset (self) {
-    console.log('cancel',self);
     document.getElementById('results').style.display = 'none';
     self.buttonPlay.classList.remove('disabled');
     self.bugs.map( (bug) => {
@@ -81,7 +76,6 @@ class CrazyRace {
     function getStep () {
       let flag = null, endOfLine = 420;
       self.bugs.map( (bug, index) => {
-        console.log(bug.id, bug.style.left, parseFloat(bug.style.left), speeds[index]);
         let x = parseFloat(bug.style.left);
         x += speeds[index];
         bug.style.left = x + 'px';
@@ -102,10 +96,15 @@ class CrazyRace {
     let win = document.getElementById('result-win'),
         loo = document.getElementById('result-loose');
     document.getElementById('results').style.display = 'block';
+    
     if (winner == this.selectedNumber) {
+      this.cash += parseFloat(this.selector.value);
+      this.updateCash();
       win.classList.remove('hidden');
       loo.classList.add('hidden');
     } else {
+      this.cash -= parseFloat(this.selector.value);
+      this.updateCash();
       win.classList.add('hidden');
       loo.classList.remove('hidden');
     }
@@ -119,6 +118,11 @@ class CrazyRace {
         ? item.classList.remove('disabled')
         : item.classList.add('disabled');
     });
+  }
+  
+  updateCash () {
+    window.localStorage.setItem('cash', this.cash); 
+    document.getElementById('cash').innerText = this.cash;
   }
 }
   

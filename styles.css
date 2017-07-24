@@ -9,6 +9,10 @@ body {
     overflow: hidden;
 }
 
+span#cash {
+  font-weight: 900;
+}
+
 .main-app {
   width:600px;
   height: 400px;
