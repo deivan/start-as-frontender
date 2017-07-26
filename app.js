@@ -11,14 +11,18 @@ class Countdown {
     let range, hours, minutes, seconds, self = this;
     this.startTime += 1000;
     range = (this.endTime - this.startTime)/1000;
-    hours = Math.round(range/this.shift);
-    minutes = (range/this.shift - hours) *60;
-    seconds = this.endTime - hours * 3.6e6 - minutes * 60;
-    console.log(this.startTime, this.endTime, range, hours. minutes, seconds)
+    hours = this.zeroAdd(Math.floor( (range/(60*60)) % 24 ));
+    minutes = this.zeroAdd(Math.floor( (range/60) % 60 ));
+    seconds = this.zeroAdd(Math.floor( range % 60 ));
+
     this.counter.innerText = `${hours}:${minutes}:${seconds}`;
     setTimeout(function () {
       self.start();
     }, 1000);
+  }
+  
+  zeroAdd (digit) {
+    return (`0${digit}`).slice(-2);
   }
 }
 
