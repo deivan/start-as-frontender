@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO supply a title</title>
+    <title>jQuery is NOT a framework!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="main">
-
+      <div class="example">
+        <h3>There are SPANS for select</h3>
+        <span>111</span>,
+        <span>222</span>,
+        <span>333</span>,
+        <span>444</span>,
+        <span>555</span>
+      </div>
+      <div class="example">
+        <h3>There are Paragrafs for select, only P with class 'special' will be selected</h3>
+        <p>there have not special class</p>
+        <p class="special">there special class is present</p>
+        <p>there have not special class</p>
+        <p class="special">there special class is present</p>
+        <p>there have not special class</p>
+      </div>
+      <div class="example">
+        <h3>Let try found some data in list</h3>
+        <ul>
+          <li>1st element</li>
+          <li>2nd element</li>
+          <li>3rd element</li>
+          <li>4rd element</li>
+          <li class="special">5th element</li>
+        </ul>
+      </div>
+      <div class="example">
+        
+      </div>
+      <div class="example">
+        
+      </div>
     </div>
+    <div class="modal-overlay" id="modal-window">
+      <div class="modal-content">
+        <h3>Modal window</h3>
+        <button>Close</button>
+      </div>
+    </div>
+    <script src="jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
