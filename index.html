@@ -9,7 +9,7 @@
   <body>
     <div class="main">
       <div class="example">
-        <h3>There are SPANS for select</h3>
+        <h3>Ex.1 There are SPANS for select</h3>
         <span>111</span>,
         <span>222</span>,
         <span>333</span>,
@@ -17,7 +17,7 @@
         <span>555</span>
       </div>
       <div class="example">
-        <h3>There are Paragrafs for select, only P with class 'special' will be selected</h3>
+        <h3>Ex.2 There are Paragrafs for select, only P with class 'special' will be selected</h3>
         <p>there have not special class</p>
         <p class="special">there special class is present</p>
         <p>there have not special class</p>
@@ -25,29 +25,51 @@
         <p>there have not special class</p>
       </div>
       <div class="example">
-        <h3>Let try found some data in list</h3>
+        <h3>Ex.3 Let try found some data in list</h3>
         <ul>
-          <li>1st element</li>
-          <li>2nd element</li>
-          <li>3rd element</li>
-          <li>4rd element</li>
-          <li class="special">5th element</li>
+          <li>The Node.js philosophy, the "Node way"</li>
+          <li>The reactor pattern: the mechanism at the heart of the Node.js
+asynchronous architecture</li>
+          <li>The Node.js callback pattern and its set of conventions</li>
+          <li>The module system and its patterns: the fundamental mechanisms for
+organizing code in Node.js</li>
+          <li class="special">The observer pattern and its Node.js incarnation: the EventEmitter class</li>
         </ul>
       </div>
-      <div class="example">
-        
+      <div class="example" id="container-for-append">
+        <h3>Ex.4 Let append some data</h3>
+        <p>The Node.js core itself has its foundations built on a few principles; one of
+these is, having the smallest set of functionality, leaving the rest to the so-called
+<span>userland</span> (or userspace), the ecosystem of modules living outside the core. This
+principle has an enormous impact on the <span>Node.js</span> culture, as it gives freedom to the
+community to experiment and iterate fast on a broader set of solutions within the
+scope of the userland modules, instead of being imposed with one slowly evolving
+solution that is built into the more tightly controlled and stable core. Keeping the
+core <span>set of functionality</span> to the bare minimum then, not only becomes convenient
+in terms of maintainability, but also in terms of the positive cultural impact that it
+brings on the evolution of the entire ecosystem.</p>
       </div>
       <div class="example">
-        
+        <h3>There is action buttons</h3>
+        <button id="example1">Span set</button>
+        <button id="example2">Select class</button>
+        <button id="example3">List manipulation</button>
+        <button id="example4">Add data</button>
+        <input type="checkbox" id="toggle-modal" /> Show modal
       </div>
     </div>
     <div class="modal-overlay" id="modal-window">
       <div class="modal-content">
         <h3>Modal window</h3>
-        <button>Close</button>
+        <button>OK</button>
       </div>
     </div>
-    <script src="jquery.min.js"></script>
-    <script src="app.js"></script>
+  <script>
+    ( () => {
+      console.log('Do it right now!!!');
+    }) ();
+  </script>
+  <script src="jquery.min.js"></script>
+  <script src="app.js"></script>
   </body>
 </html>
