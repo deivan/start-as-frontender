@@ -1,9 +1,17 @@
 'use strict';
 
 $(document).ready( () => {
-  console.log('jQuery is ready for manipulations with DOM');
+  console.log('app started');
+  new Catalog();
 });
 
-window.onload = () => {
-  console.log('Document loaded');
-};
+class Catalog {
+  constructor () {
+    
+    this.getData();
+  }
+  
+  getData () {
+    
+  }
+}
