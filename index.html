@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="main">
-      <div class="example">
+      <div class="example example1" data-type="e1">
         <h3>Ex.1 There are SPANS for select</h3>
         <span>111</span>,
         <span>222</span>,
@@ -16,7 +16,7 @@
         <span>444</span>,
         <span>555</span>
       </div>
-      <div class="example">
+      <div class="example example2">
         <h3>Ex.2 There are Paragrafs for select, only P with class 'special' will be selected</h3>
         <p>there have not special class</p>
         <p class="special">there special class is present</p>
@@ -24,7 +24,7 @@
         <p class="special">there special class is present</p>
         <p>there have not special class</p>
       </div>
-      <div class="example">
+      <div class="example example3">
         <h3>Ex.3 Let try found some data in list</h3>
         <ul>
           <li>The Node.js philosophy, the "Node way"</li>
@@ -49,7 +49,7 @@ core <span>set of functionality</span> to the bare minimum then, not only become
 in terms of maintainability, but also in terms of the positive cultural impact that it
 brings on the evolution of the entire ecosystem.</p>
       </div>
-      <div class="example">
+      <div class="example example5">
         <h3>There is action buttons</h3>
         <button id="example1">Span set</button>
         <button id="example2">Select class</button>
@@ -61,12 +61,12 @@ brings on the evolution of the entire ecosystem.</p>
     <div class="modal-overlay" id="modal-window">
       <div class="modal-content">
         <h3>Modal window</h3>
-        <button>OK</button>
+        <button id="butOk">OK</button>
       </div>
     </div>
   <script>
     ( () => {
-      console.log('Do it right now!!!');
+      console.log('Do it right now!!!', (new Date()).getTime());
     }) ();
   </script>
   <script src="jquery.min.js"></script>
