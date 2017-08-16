@@ -7,11 +7,11 @@ $(document).ready( () => {
 
 class Catalog {
   constructor () {
-    
+    this.data = null;
     this.getData();
   }
   
   getData () {
-    
+
   }
 }
