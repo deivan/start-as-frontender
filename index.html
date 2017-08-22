@@ -6,60 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="jquery-ui.min.css" />
     <link rel="stylesheet" href="styles.css" />
+      <style>
+  .ui-progressbar {
+    position: relative;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  </style>
   </head>
   <body>
     <div class="main">
       <div id="accordion">
-        <h3>Section 1</h3>
+        <h3>Slider</h3>
         <div>
+          <div id="slider-range"></div>
           <p>
-          Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-          ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-          amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-          odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            Left side: <span id="left-slider"></span>
+            Right side: <span id="right-slider"></span>
           </p>
         </div>
-        <h3>Section 2</h3>
+        
+        <h3>Autocomplete</h3>
         <div>
-          <p>
-          Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-          purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-          velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-          suscipit faucibus urna.
-          </p>
+
+          <div class="ui-widget">
+            <label for="tags">Tags: </label>
+            <input id="tags">
+          </div>
+
         </div>
-        <h3>Section 3</h3>
+        
+        <h3>Datepicker</h3>
         <div>
-          <p>
-          Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-          Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-          ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-          lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-          </p>
-          <ul>
-            <li>List item one</li>
-            <li>List item two</li>
-            <li>List item three</li>
-          </ul>
+          <p>Date: <input type="text" id="datepicker"></p>
+          
         </div>
+        
         <h3>Section 4</h3>
         <div>
-          <p>
-          Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-          faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-          mauris vel est.
-          </p>
-          <p>
-          Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos.
-          </p>
+          <button id="launchDialog">Show</button>
+          <div id="dialog-confirm" title="Empty the recycle bin?">
+            <p>
+              <span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+              These items will be permanently deleted and cannot be recovered. Are you sure?
+            </p>
+          </div>
+        </div>
+        
+        <h3>progress bar</h3>
+        <div>
+          <div id="progressbar">
+            <div class="progress-label">Loading...</div>
+          </div>
+          <button id="launchBar">Show</button>
         </div>
       </div>
     </div>
     <script src="jquery.min.js"></script>
     <script src="jquery-ui.min.js"></script>
     <script src="app.js"></script>
+    <script>
+      /* Ukrainian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+/* Written by Maxim Drogobitskiy (maxdao@gmail.com). */
+/* Corrected by Igor Milla (igor.fsp.milla@gmail.com). */
+( function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+
+		// AMD. Register as an anonymous module.
+		define( [ "../widgets/datepicker" ], factory );
+	} else {
+
+		// Browser globals
+		factory( jQuery.datepicker );
+	}
+}( function( datepicker ) {
+
+datepicker.regional.uk = {
+	closeText: "Закрити",
+	prevText: "&#x3C;",
+	nextText: "&#x3E;",
+	currentText: "Сьогодні",
+	monthNames: [ "Січень","Лютий","Березень","Квітень","Травень","Червень",
+	"Липень","Серпень","Вересень","Жовтень","Листопад","Грудень" ],
+	monthNamesShort: [ "Січ","Лют","Бер","Кві","Тра","Чер",
+	"Лип","Сер","Вер","Жов","Лис","Гру" ],
+	dayNames: [ "неділя","понеділок","вівторок","середа","четвер","п’ятниця","субота" ],
+	dayNamesShort: [ "нед","пнд","вів","срд","чтв","птн","сбт" ],
+	dayNamesMin: [ "Нд","Пн","Вт","Ср","Чт","Пт","Сб" ],
+	weekHeader: "Тиж",
+	dateFormat: "dd.mm.yy",
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: "" };
+datepicker.setDefaults( datepicker.regional.uk );
+
+return datepicker.regional.uk;
+
+} ) );
+    </script>
   </body>
 </html>
