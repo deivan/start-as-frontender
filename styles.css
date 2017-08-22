@@ -77,3 +77,22 @@ table {
   background-color: #00c;
 }
 
+#map {
+  width: 400px;
+  height:300px;
+  position: relative;
+  z-index: 1;
+}
+
+#map-autocomplete {
+  position:absolute;
+  padding: 5px 15px;
+  background-color: #fff;
+  color: #666;
+  border:1px solid #444;
+  border-radius: 4px;
+  top:20px;
+  left: 20px;
+  z-index: 10;
+}
+
