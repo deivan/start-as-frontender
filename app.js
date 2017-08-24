@@ -14,12 +14,22 @@ class Catalog {
     });
     
     this.initMap();
+    this.startCountdown();
     this.startTwenty();
     this.startZoom();
   }
   
   initMap () {
 
+  }
+  
+  startCountdown () {
+    let counter = $("#getting-started");
+    counter.countdown("2018/01/01", (e) => {
+      counter.text(
+        e.strftime('%D days %H:%M:%S')
+      );
+    });
   }
   
   startTwenty() {
