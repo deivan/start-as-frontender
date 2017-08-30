@@ -4,82 +4,29 @@
     <title>UI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="jquery-ui.min.css" />
-    <link href="foundation.css" rel="stylesheet" type="text/css" />
-    <link href="twentytwenty.css" rel="stylesheet" type="text/css" />
-    <link href="https://unpkg.com/nanogallery2@1.4.0/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="main">
-      <div id="accordion">
-        
-        <h3>Countdown</h3>
-        <div>
-          <div id="getting-started"></div>
-        </div>
-        
-        <h3>Horizon Scroll</h3>
-        <div>
-          <p><a href="scroll.html">Find it here</a></p>
-          
-        </div>
-        
-        <h3>twenty twenty</h3>
-        <div>
-          <div id="twentytwenty-container">
-            <img src="images/1_1.jpg" />
-            <img src="images/1_2.jpg" />
-          </div>
-        </div>
-        
-        <h3>nano gallery</h3>
-        <div>
-          <!--
-          <div id="nanogallery2" data-nanogallery2='{
-        "thumbnailHeight":         210, "thumbnailWidth": 210,
-        "thumbnailL1GutterWidth":  90,
-        "thumbnailL1GutterHeight": 90,
-        "thumbnailBorderVertical": 0,
-        "thumbnailBorderHorizontal": 0,
-        "itemsBaseURL":            "/start-as-frontender/",
-        "thumbnailStacks":         4,
-        "thumbnailStacksRotateZ":  0.4,
-        "thumbnailBuildInit2":     "thumbnail_transform-origin_50% 150%",
-        "thumbnailHoverEffect2":   "thumbnail_rotateZ_0deg_15deg_easeOutQuad_200_hoverin | thumbnail_rotateZ_15deg_-10deg_delay250_keyframe_hoverin_easeOutBack_400 | thumbnail_rotateZ_-10deg_0deg_keyframe_hoverout_easeOutBack_400"
-      }'>
-            <a href="images/party1.jpg" data-ngthumb="images/party1t.jpg">Party 1</a>
-            <a href="images/party2.jpg" data-ngthumb="images/party2t.jpg">Party 2</a>
-            <a href="images/party3.jpg" data-ngthumb="images/party3t.jpg">Party 3</a>
-          </div>
-          -->
-        </div>
-        
-        <h3>Zoom image</h3>
-        <div>
-           <img id="zoom_01" src='images/small-image1.png' data-zoom-image="images/large-image1.jpg" />
-        </div>
-        
-        <h3>Google Map</h3>
-        <div>
-          <div id="map">
-            <input type="text" id="map-autocomplete" />
-          </div>
-        </div>          
-      </div>
-
-      
-      
+      <div id="map"></div>
+      <input type="text" id="map-autocomplete" />
     </div>
-    <script src="jquery.min.js"></script>
-    <script src="jquery-ui.min.js"></script>
-    <script src="jquery.countdown.js"></script>
-    <script src="jquery.event.move.js"></script>
-    <script src="jquery.twentytwenty.js"></script>
-    <script src="https://unpkg.com/nanogallery2@1.4.0/dist/jquery.nanogallery2.min.js"></script>
-    <script src='jquery.elevatezoom.js'></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLdk_3l3rMgLezHljZas8olm57cbWNPEU"></script>
 
-    <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLdk_3l3rMgLezHljZas8olm57cbWNPEU"></script>
+    <script>
+      window.onload = () => {
+        let center = { lat: 48.356, lng: 35.332 },
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: center,
+          zoom: 13
+        }),
+        marker = new google.maps.Marker({
+          position: center,
+          title: 'Hello World!'
+        });
+;
+
+      };
+    </script>
   </body>
 </html>
