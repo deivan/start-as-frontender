@@ -12,7 +12,7 @@
       <input type="text" id="map-autocomplete" />
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLdk_3l3rMgLezHljZas8olm57cbWNPEU"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLdk_3l3rMgLezHljZas8olm57cbWNPEU&libraries=places"></script>
     <script>
       window.onload = () => {
         let center = { lat: 48.356, lng: 35.332 },
@@ -24,8 +24,22 @@
           position: center,
           title: 'Hello World!'
         });
-;
+        
+        let a = new google.maps.places.Autocomplete(document.getElementById('map-autocomplete'));
 
+        a.addListener('place_changed', () => {
+          let place = a.getPlace();
+          console.log(place.geometry.location.lat(), place.geometry.location.lng())
+          marker.setPosition({ 
+            lat:place.geometry.location.lat(),
+            lng:place.geometry.location.lng()
+          });
+          marker.setMap(map);
+          map.panTo({ 
+            lat:place.geometry.location.lat(),
+            lng:place.geometry.location.lng()
+          })
+        });
       };
     </script>
   </body>
