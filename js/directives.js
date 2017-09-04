@@ -6,7 +6,12 @@
     
   function myHeader () {
     return {
-      template: '<h1>Header: </h1><hr /><h5>someting else may be here</h5>'
+      template: '<h1 ng-style="myStyle">Header: {{newTitle}}</h1><hr ng-if="isLined" /><h5>someting else may be here</h5>',
+      scope: {
+        newTitle: '=info',
+        isLined: '=lined',
+        myStyle: '=mystyle'
+      }
     };
   }
 })();

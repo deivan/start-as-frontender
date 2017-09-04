@@ -4,7 +4,14 @@
   angular.module('app', [])
     .run(['$rootScope', runApp])
     .constant('appConfig', {
-        someData: ''
+        someData: '',
+        data: [
+          { key: 'a', content: 'AAA'},
+          { key: 'b', content: 'BBB'},
+          { key: 'c', content: 'CCC'},
+          { key: 'd', content: 'DDD'},
+          { key: 'e', content: 'EEE'},
+        ]
     });
 
   function runApp ($rootScope) {
