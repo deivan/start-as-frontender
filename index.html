@@ -8,34 +8,25 @@
   </head>
   <body ng-app="app">
     <div class="main" ng-controller="mainPage">
-      <my-header info="newName" lined="showLine" mystyle="newStyle"></my-header>
-      <div class="content">
-        <div class="content__panel">
-          <span>Site name: </span>
-          <input type="text" ng-model="siteName" />
-          <hr />
-          <button ng-click="transformer()">Change text</button>
-          <button ng-click="changeColor()">Change color</button>
-          <input type="checkbox" ng-model="showLine" />
-          <button ng-click="addLine()">Add line</button>
-          <hr>
-          <select  ng-model="current">
-            <option value="null" disabled>select one</option>
-            <option ng-repeat="item in objItems" 
-                    value="{{item.key}}">{{item.content}}</option>
-          </select>
+      <div class="tabs">
+        <div class="tabs__header">
+          <div class="tabs__header--item">Users</div>
+          <div class="tabs__header--item">Books</div>
+          <div class="tabs__header--item">Vehicles</div>
         </div>
-        <div class="content__panel">
-          <p>Site name is: <span>{{siteName}}</span></p>
-          <p>Changed name is: <span>{{newName}}</span></p>
-          <hr>
-          <p ng-repeat="item in items track by $index">{{$index}}: {{item}}</p>
+        <div class="tabs__content">
+          1
+        </div>
+        <div class="tabs__content">
+          2
+        </div>
+        <div class="tabs__content">
+          3
         </div>
       </div>
     </div>
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-    <script src="js/directives.js"></script>
   </body>
 </html>

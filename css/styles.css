@@ -15,15 +15,6 @@ table {
   width: 100%;
 }
 
-my-header h1 {
-  color: #008;
-}
-my-header h5 {
-  padding: 0;
-  margin: 5px;
-  text-align: center;
-}
-
 .main {
   margin: 10px auto;
   width: 800px;
@@ -32,17 +23,33 @@ my-header h5 {
   border-radius: 10px;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  width: calc(100%-20px);
+.tabs {
+  width: 600px;
   padding: 10px;
 }
 
-.content .content__panel {
-  width: 300px;
-  padding: 15px 5px;
-  border: 1px solid #444;
-  border-radius: 10px;
-  background-color: #eee;
+.tabs__header {
+  width: 100%;
+}
+
+.tabs__header--item {
+  display: inline-block;
+  height:  30px;
+  line-height: 30px;
+  width:100px;
+  border: 2px solid #008;
+  border-bottom:none;
+  border-top-right-radius: 30px;
+  background-color: #008;
+  color: #fff;
+  margin-right: 2px;
+  text-align:center;
+  cursor: pointer;
+}
+
+.tabs__content {
+  width: calc(100%-20px);
+  padding: 10px;
+  height: 500px;
+  border: 2px solid #008;
 }
