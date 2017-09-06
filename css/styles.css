@@ -10,6 +10,7 @@ table, td, th {
   padding: 0;
   margin: 0;
   font-size: 14px;
+  border-spacing: 0;
 }
 table {
   width: 100%;
@@ -47,9 +48,22 @@ table {
   cursor: pointer;
 }
 
+.tabs__header--item.tab--selected {
+  background-color: #fff;
+  color: #008;
+}
+
 .tabs__content {
   width: calc(100%-20px);
   padding: 10px;
   height: 500px;
   border: 2px solid #008;
+}
+
+tr:first-child {
+ background-color: #0dd;
+}
+
+td {
+  border-bottom: 1px solid #0dd;
 }

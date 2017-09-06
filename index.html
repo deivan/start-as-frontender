@@ -10,18 +10,74 @@
     <div class="main" ng-controller="mainPage">
       <div class="tabs">
         <div class="tabs__header">
-          <div class="tabs__header--item">Users</div>
-          <div class="tabs__header--item">Books</div>
-          <div class="tabs__header--item">Vehicles</div>
+          <div class="tabs__header--item" ng-click="showTab(1)"
+               ng-class="{ 'tab--selected':activeTab === 1 }">Users</div>
+          <div class="tabs__header--item" ng-click="showTab(2)"
+               ng-class="{ 'tab--selected':activeTab === 2 }">Books</div>
+          <div class="tabs__header--item" ng-click="showTab(3)"
+               ng-class="{ 'tab--selected':activeTab === 3 }">Vehicles</div>
         </div>
-        <div class="tabs__content">
-          1
+        <div class="tabs__content" ng-show="activeTab === 1">
+          Search by <input type="text" ng-model="search1.email" />
+          <hr />
+          <table>
+            <tr>
+              <th ng-click="setUsersOrder('id')">ID
+                <span ng-if="userOrder === 'id'">&nbsp;*</span></th>
+              <th ng-click="setUsersOrder('name')">Name
+                <span ng-if="userOrder === 'name'">&nbsp;*</span></th>
+              <th ng-click="setUsersOrder('email')">Email
+                <span ng-if="userOrder === 'email'">&nbsp;*</span></th>
+              <th ng-click="setUsersOrder('online')">Status
+                <span ng-if="userOrder === 'online'">&nbsp;*</span></th>
+              <th ng-click="setUsersOrder('banned')">Ban state
+                <span ng-if="userOrder === 'banned'">&nbsp;*</span></th>
+              <th ng-click="setUsersOrder('paidType')">Payment type
+                <span ng-if="userOrder === 'paidType'">&nbsp;*</span></th>
+              <th></th>
+            </tr>
+            <tr ng-repeat="user in users | orderBy: userOrder : comparator | filter:search1 ">
+              <td>{{user.id}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.online ? 'Online' : 'Offline'}}</td>
+              <td>{{user.banned ? 'Ban' : ''}}</td>
+              <td>{{user.paidType}}</td>
+              <td><span  ng-click="deleteUser(user.id, $event)">delete</span></td>
+            </tr>
+          </table>
         </div>
-        <div class="tabs__content">
-          2
+        <div class="tabs__content" ng-show="activeTab === 2">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Autor</th>
+              <th>Title</th>
+              <th>Price</th>
+            </tr>
+            <tr ng-repeat="boo in books">
+              <td>{{boo.id}}</td>
+              <td>{{boo.author}}</td>
+              <td>{{boo.title}}</td>
+              <td>{{boo.price|currency}}</td>
+            </tr>
+          </table>
         </div>
-        <div class="tabs__content">
-          3
+        <div class="tabs__content" ng-show="activeTab === 3">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Type</th>
+              <th>Model</th>
+              <th>Color</th>
+            </tr>
+            <tr ng-repeat="v in vehicles">
+              <td>{{v.id}}</td>
+              <td>{{v.type}}</td>
+              <td>{{v.model}}</td>
+              <td>{{v.color}}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

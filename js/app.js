@@ -17,9 +17,9 @@
           { id: 108, name: 'Norman', email: 'nooooo@llq1.com', online: true, banned: false, paidType: 3}
         ],
         mock2: [
-          { id: 2000, author: 'John Resigh', title: 'Javascript Ninja', price: '10.20'},
-          { id: 2001, author: 'Linus Torvalds', title: 'Just For Fun', price: '5.35'},
-          { id: 2002, author: 'Ivan Demenkov', title: 'Some people is thiking they think', price: '9.99'}
+          { id: 2000, author: 'John Resigh', title: 'Javascript Ninja', price: '10.2110'},
+          { id: 2001, author: 'Linus Torvalds', title: 'Just For Fun', price: '5.3225'},
+          { id: 2002, author: 'Ivan Demenkov', title: 'Some people is thiking they think', price: '9.9999'}
         ],
         mock3: [
           { id: 30000, type: 'car', model: 'Honda Civic', color: 'white' },
