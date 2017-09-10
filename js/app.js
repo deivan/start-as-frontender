@@ -1,7 +1,8 @@
 (function () {
   'use strict';
 
-  angular.module('app', [])
+  angular.module('app', []) // 'pascalprecht.translate'
+//    .config(['$translateProvider', translateProvider])
     .run(['$rootScope', runApp])
     .constant('appConfig', {
         someData: '',
@@ -33,8 +34,19 @@
     $rootScope.title = 'My Test Application';
     console.log('app started');
   }
+  
+//  function translateProvider ($translateProvider) {
+//      $translateProvider
+//        .useStaticFilesLoader({
+//            prefix: 'js/',
+//            suffix: '.json'
+//        })
+//        .preferredLanguage('en')
+//        .useSanitizeValueStrategy('escape');
+//    }
 
 })();
-// show table data filders, ordering
-// add form for collect, delete and update data via ngDialog
-// form validators
+// add directive for showcard
+// add ngDialog for edit form
+// add form with validators
+// add trsnslator

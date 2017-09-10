@@ -25,7 +25,7 @@ table {
 }
 
 .tabs {
-  width: 600px;
+  width: 650px;
   padding: 10px;
 }
 
@@ -56,8 +56,47 @@ table {
 .tabs__content {
   width: calc(100%-20px);
   padding: 10px;
-  height: 500px;
+  height: auto;
   border: 2px solid #008;
+}
+
+.tabs__content--link {
+  text-decoration: underline;
+  color: purple;
+  cursor: pointer;
+}
+
+.tabs__paycards--core {
+  display: flex;
+  align-items: center;
+}
+
+.tabs__paycards {
+  display: inline-block;
+  width: 71px;
+  height: 45px;
+}
+
+.tabs__paycards--visa {
+  background: url('../images/visa-mastercard.png') no-repeat -2px -2px;
+}
+
+.tabs__paycards--ae {
+  background: url('../images/visa-mastercard.png') no-repeat -2px -48px;
+}
+
+.tabs__paycards--mastercard {
+  background: url('../images/visa-mastercard.png') no-repeat -74px -2px;
+}
+
+.tabs__paycards--discover {
+  background: url('../images/visa-mastercard.png') no-repeat -74px -48px;
+}
+
+.tabs__paycards--label {
+  padding-left: 10px;
+  font-style: italic;
+  font-weight: 800;
 }
 
 tr:first-child {
@@ -66,4 +105,8 @@ tr:first-child {
 
 td {
   border-bottom: 1px solid #0dd;
+}
+
+th {
+  cursor:pointer;
 }

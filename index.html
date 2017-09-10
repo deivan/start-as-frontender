@@ -43,7 +43,7 @@
               <td>{{user.online ? 'Online' : 'Offline'}}</td>
               <td>{{user.banned ? 'Ban' : ''}}</td>
               <td>{{user.paidType}}</td>
-              <td><span  ng-click="deleteUser(user.id, $event)">delete</span></td>
+              <td><span class="tabs__content--link" ng-click="deleteUser(user.id)">delete</span></td>
             </tr>
           </table>
         </div>
@@ -82,7 +82,10 @@
       </div>
     </div>
     <script src="js/angular.min.js"></script>
+<!--    <script src="js/angular-translate.js"></script>
+    <script src="js/angular-translate-loader-static-files.js"></script>-->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
   </body>
 </html>

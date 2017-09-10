@@ -2,7 +2,8 @@
   'use strict';
   
   angular.module('app')
-    .directive('myHeader', myHeader);
+    .directive('myHeader', myHeader)
+    .directive('paymentType', paymentType);
     
   function myHeader () {
     return {
@@ -14,4 +15,31 @@
       }
     };
   }
+  
+  function paymentType () {
+    return {
+      template: 
+        '<div class="tabs__paycards--core">\
+          <span class="tabs__paycards" ng-class="cardClasses[paymentType]"></span>\
+          <span class="tabs__paycards--label">{{cardLabels[paymentType]}}</span>\
+        </div>',
+      scope: { 
+        paymentType: '=payment'
+      },
+      controller:['$scope', paymentController]
+    };
+    
+    function paymentController ($scope) {
+      $scope.cardClasses = [
+        'tabs__paycards--discover',
+        'tabs__paycards--visa',
+        'tabs__paycards--mastercard',
+        'tabs__paycards--ae'
+      ];
+      $scope.cardLabels = [
+        'Discover','Visa','MasterCard','AmericanExpress'
+      ];
+    }
+  }
+  
 })();
