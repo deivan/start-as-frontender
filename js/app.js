@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  angular.module('app', []) // 'pascalprecht.translate'
-//    .config(['$translateProvider', translateProvider])
+  angular.module('app', ['ngDialog','pascalprecht.translate']) // 'pascalprecht.translate'
+    .config(['$translateProvider', translateProvider])
     .run(['$rootScope', runApp])
     .constant('appConfig', {
         someData: '',
@@ -35,15 +35,15 @@
     console.log('app started');
   }
   
-//  function translateProvider ($translateProvider) {
-//      $translateProvider
-//        .useStaticFilesLoader({
-//            prefix: 'js/',
-//            suffix: '.json'
-//        })
-//        .preferredLanguage('en')
-//        .useSanitizeValueStrategy('escape');
-//    }
+  function translateProvider ($translateProvider) {
+      $translateProvider
+        .useStaticFilesLoader({
+            prefix: 'js/',
+            suffix: '.json'
+        })
+        .preferredLanguage('ru')
+        .useSanitizeValueStrategy('escape');
+    }
 
 })();
 // add directive for showcard
