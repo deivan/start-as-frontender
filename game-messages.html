@@ -1,0 +1,20 @@
+<h1>New message</h1>
+<div class="messages__new">
+  <select ng-options="user.username for user in users" ng-model="thisUser"></select>
+  <textarea placeholder="Type some text here..." ng-model="firstMessage"></textarea>
+  <button ng-click="startConversation()">Start conversation</button>
+</div>
+<h1>Previous conversations</h1>
+<div class="messages__feed">
+  <div class="messages__item" ng-repeat="item in conversations">
+    <div class="messages__header">
+      <div class="messages__header--date">{{item.messages[0].date}}</div>
+      <div class="messages__header--name">{{getMate(item.authors)}}</div>
+      <div class="messages__header--text">{{item.messages[0].text}}</div>
+      <a href="#/messages/{{item._id}}/view">Show dialog</a>      
+    </div>
+    <div class="messages__content">
+      
+    </div>
+  </div>
+</div>

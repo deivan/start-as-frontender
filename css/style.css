@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'playfair';
+  src: url(../fonts/playfair.ttf);
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url(../fonts/shrikhand-regular.ttf) format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    background-image: url(../images/best_place.jpg);
+    background-size: cover;
+    font-family: playfair;
+}
+
+.main {
+    position: relative;
+    width:820px;
+    height: 730px;
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+h1, h2, h3,h4, h5 {
+    font-family: 'shrikhand', cursive;
+}
+.main__logotype {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/sinichka_back.jpg);
+}
+
+.main__logotype img {
+    position: absolute;
+    top:0;
+    left: 120px;
+}
+
+.main nav {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.main nav a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color:yellow;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main nav a:hover {
+    text-decoration: underline;
+}
+
+.main nav a.nav--active {
+    color: #fff;
+    text-decoration: none;
+    pointer-events: none; 
+}
+
+.main nav form {
+  font-family: arial;
+  font-size: 14px;
+}
+
+.animation-appear {
+  animation-name: appearIn;
+  animation-duration: 3s;
+}
+
+.wrong-zone {
+  background-color: #f00;
+  color: yellow;
+}
+
+.wrong-image {
+  margin: 0 auto;
+}
+
+.good-zone {
+  background-color: #fff;
+  color: #080;
+}
+
+.good-image {
+  margin: 0 auto;
+}
+
+.line {
+  width: 100%;
+  padding: 10px 2px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.line label {
+  display:inline-block;
+  width: 250px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.line input, .line textarea {
+  width:200px;
+}
+
+.line input[type="submit"] {
+  height: 50px;
+  border-radius: 5px;
+  background-color: #99ffff;
+  color: #444;
+}
+
+span.error{
+  color: #f00;
+}
+
+span.success {
+  color: #0f0;
+}
+
+@keyframes appearIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

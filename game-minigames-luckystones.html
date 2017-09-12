@@ -1,0 +1,23 @@
+<h1>Lucky Stones</h1>
+<div class="minigames__ls">
+  <div class="minigames__ls--title">
+    Check your luck: select 3 stones below
+  </div>
+  <div class="minigames__ls--content">
+    <div class="minigames__ls--line">
+      <div class="minigames__ls--stone" ng-click="setStone('1')" ng-class="{'selected': stones['1'], 'nowin':wrongs[1], 'win':wins[1]}"></div>
+      <div class="minigames__ls--stone" ng-click="setStone('2')" ng-class="{'selected': stones['2'], 'nowin':wrongs[2], 'win':wins[2]}"></div>
+      <div class="minigames__ls--stone" ng-click="setStone('3')" ng-class="{'selected': stones['3'], 'nowin':wrongs[3], 'win':wins[3]}"></div>
+    </div>
+    <div class="minigames__ls--line">
+      <div class="minigames__ls--stone" ng-click="setStone('4')" ng-class="{'selected': stones['4'], 'nowin':wrongs[4], 'win':wins[4]}"></div>
+      <div class="minigames__ls--stone" ng-click="setStone('5')" ng-class="{'selected': stones['5'], 'nowin':wrongs[5], 'win':wins[5]}"></div>
+      <div class="minigames__ls--stone" ng-click="setStone('6')" ng-class="{'selected': stones['6'], 'nowin':wrongs[6], 'win':wins[6]}"></div>
+      <div class="minigames__ls--stone" ng-click="setStone('7')" ng-class="{'selected': stones['7'], 'nowin':wrongs[7], 'win':wins[7]}"></div>
+    </div>
+    <div class="minigames__ls--line">
+      <a class="minigames__ls--button" href ng-hide="playDisabled" ng-click="playLuckyStones()">Let's Play!</a>
+      <a class="minigames__ls--button" href ng-click="clearGame()">Reset</a>
+    </div>
+  </div>
+</div>

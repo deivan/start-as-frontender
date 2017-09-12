@@ -1,0 +1,54 @@
+<h1>Single battle with bot</h1>
+
+<div class="single-battles__content">
+  <div class="single-battles__player" ng-style="playerMoving">
+    <div class="single-battles__player--wings-skin" ng-style="shieldSkin"></div>
+    <div class="single-battles__player--wings" 
+         ng-class="{'selected':selectedShield === 1}" 
+         ng-click="hitPlayer(1)"></div>
+    <div class="single-battles__player--body" ng-class="{'selected':selectedShield === 2}" ng-click="hitPlayer(2)"></div>
+    <div class="single-battles__player--head-skin" ng-style="gunSkin"></div>
+    <div class="single-battles__player--head" 
+         ng-class="{'selected':selectedShield === 3}" 
+         ng-click="hitPlayer(3)"></div>
+    <div class="single-battles__player--blast" 
+         ng-show="enemyStrikeShow" 
+         ng-style="enemyStrikeStyle"></div>
+  </div>
+  <div class="single-battles__enemy" ng-style="enemyMoving">
+    <div class="single-battles__enemy--wings" 
+         ng-class="{'selected':selectedStrike === 1}" 
+         ng-click="hitEnemy(1)"></div>
+    <div class="single-battles__enemy--body" ng-class="{'selected':selectedStrike === 2}" ng-click="hitEnemy(2)"></div>
+    <div class="single-battles__enemy--head" 
+         ng-class="{'selected':selectedStrike === 3}" 
+         ng-click="hitEnemy(3)"></div>
+    <div class="single-battles__enemy--blast" 
+         ng-show="enemyShieldShow" 
+         ng-style="enemyShieldStyle"></div>
+  </div>
+  <div class="single-battles__status">
+    <div class="single-battles__status--player">
+      <div class="health--label">Player health</div>
+      <div class="health--line">
+        <div class="health--back" ng-style="playerStyle"></div>
+        <div class="health--value">{{healthPlayer}}</div>
+      </div>
+    </div>
+    <div class="single-battles__status--enemy">
+      <div class="health--label">Enemy health</div>
+      <div class="health--line">
+        <div class="health--back" ng-style="enemyStyle"></div>
+        <div class="health--value">{{healthEnemy}}</div>
+      </div>
+    </div>
+    <div class="single-battles__status--timer">0:{{turnTime}}</div>
+    <div class="single-battles__status--fight" ng-click="makeTurn()"></div>
+  </div>
+  <div class="single-battles__overlay" ng-click="startGame(0)" ng-show="overlay"></div>
+</div>
+
+<div class="modal-battle-finish" ng-show="finish.isShow">
+  <div class="modal-battle-finish--text">{{finish.prompt}}</div>
+  <div class="modal-battle-finish--button" ng-click="hideFinish()">OK</div>
+</div>

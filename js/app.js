@@ -1,52 +1,89 @@
-(function () {
-  'use strict';
-
-  angular.module('app', ['ngDialog','pascalprecht.translate']) // 'pascalprecht.translate'
-    .config(['$translateProvider', translateProvider])
-    .run(['$rootScope', runApp])
-    .constant('appConfig', {
-        someData: '',
-        mock1: [
-          { id: 100, name: 'Josef', email: 'asssass@111.com', online: true, banned: false, paidType: 1},
-          { id: 101, name: 'Adam', email: 'adam11@222.com', online: false, banned: false, paidType: 1},
-          { id: 102, name: 'Joe', email: 'j1111@aaaa.com', online: false, banned: false, paidType: 2},
-          { id: 103, name: 'Anselmo', email: 'anselm.aa@deeee.com', online: true, banned: false, paidType: 2},
-          { id: 104, name: 'Boris', email: 'boris-boris@aadddn.com', online: true, banned: false, paidType: 2},
-          { id: 105, name: 'Willy', email: 'w1w@3sss.com', online: false, banned: false, paidType: 1},
-          { id: 106, name: 'Chris', email: 'ch09@aaaaxaa.com', online: true, banned: false, paidType: 1},
-          { id: 107, name: 'Amanda', email: 'ama@nda.com', online: false, banned: true, paidType: 1},
-          { id: 108, name: 'Norman', email: 'nooooo@llq1.com', online: true, banned: false, paidType: 3}
-        ],
-        mock2: [
-          { id: 2000, author: 'John Resigh', title: 'Javascript Ninja', price: '10.2110'},
-          { id: 2001, author: 'Linus Torvalds', title: 'Just For Fun', price: '5.3225'},
-          { id: 2002, author: 'Ivan Demenkov', title: 'Some people is thiking they think', price: '9.9999'}
-        ],
-        mock3: [
-          { id: 30000, type: 'car', model: 'Honda Civic', color: 'white' },
-          { id: 30001, type: 'car', model: 'Chery Tyggo', color: 'black' },
-          { id: 30003, type: 'car', model: 'Lada 2107', color: 'baklajan' },
-          { id: 30004, type: 'bike', model: 'Aprillia Lux', color: 'yellow' }
-        ]
-    });
-
-  function runApp ($rootScope) {
-    $rootScope.title = 'My Test Application';
-    console.log('app started');
-  }
+angular.module('app',['ngRoute'])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl : 'game-profile.html',
+        controller: 'ProfilePage'
+      })
+      .when('/equipment', {
+        templateUrl : 'game-equipment.html',
+        controller: 'EquipmentPage'
+      })
+      .when('/messages', {
+        templateUrl : 'game-messages.html',
+        controller: 'MessagesPage'
+      })
+      .when('/messages/:id/view', {
+        templateUrl : 'game-message-view.html',
+        controller: 'MessageViewPage'
+      })
+      .when('/mini', {
+        templateUrl : 'game-minigames.html',
+        controller: 'MinigamesPage'
+      })
+      .when('/mini/luckystones', {
+        templateUrl : 'game-minigames-luckystones.html',
+        controller: 'MinigamesLSPage'
+      })
+      .when('/mini/crazyrace', {
+        templateUrl : 'game-minigames-crazyrace.html',
+        controller: 'MinigamesCRPage'
+      })
+      .when('/single/bot', {
+        templateUrl : 'game-single-battles.html',
+        controller: 'SingleBattle'
+      })
+      .when('/single/duel', {
+        templateUrl : 'game-single-battles-duel.html',
+        controller: 'SingleBattleDuel'
+      });
+  })
   
-  function translateProvider ($translateProvider) {
-      $translateProvider
-        .useStaticFilesLoader({
-            prefix: 'js/',
-            suffix: '.json'
-        })
-        .preferredLanguage('ru')
-        .useSanitizeValueStrategy('escape');
-    }
+  .run(function($rootScope){
+    $rootScope.messages = [];
+    $rootScope.finish = {
+      isShow: false,
+      prompt: 'You are looser! Come back later and fight again.'
+    };
+    
+    var socket = new WebSocket('ws://demenkov.dp.ua:8001');
+    
+    socket.onopen = function() {
+      console.log("Соединение установлено.");
+    };
 
-})();
-// add directive for showcard
-// add ngDialog for edit form
-// add form with validators
-// add trsnslator
+    socket.onclose = function(event) {
+      console.log('Код: ' + event.code + ' причина: ' + event.reason);
+    };
+
+    socket.onmessage = function(event) {
+      console.log("Получены данные ", event);
+      var data;
+      try {
+        data = JSON.parse(event.data);
+        data.data.text = decodeURI(data.data.text);
+        $rootScope.messages.push(data);
+        $rootScope.$apply();
+      } catch (error) {
+        console.log('error when parsing JSON:',error);
+      }
+
+    };
+
+    socket.onerror = function(error) {
+      console.log("Ошибка " + error.message);
+    };
+    
+    $rootScope.sendToSocket = function (data) {
+      var message = {
+        type: 'chat',
+        data: {
+          name: $rootScope.me,
+          text: encodeURI(data)
+        }
+      };
+      socket.send(JSON.stringify(message));
+    };
+    
+    //$rootScope.sendToSocket('ababagalamaga');
+  });
