@@ -5,17 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="main">
-      <h1>Welcome to City 17!</h1>
+      <h1>Welcome to the City 17!</h1>
       <div class="" id="app-instance">
-        
+        <div class="slider">
+          <img src="images/image01.jpg" class="" />
+          <img src="images/image02.jpg" class="" />
+          <img src="images/image03.jpg" class="" />
+        </div>
+        <div class="edit__block">
+          <h3>Edit Zone</h3>
+        </div>
+        <div class="content">
+          <h3>Our citizens:</h3>
+          <ul>
+            <li>Gordon Freeman, a hero</li>
+            <li>Judith Mossman, scientist</li>
+            <li>Alix Vance, rebel</li>
+            <li>Isaac Kleiner, scientist</li>
+          </ul>
+          <input class="input" />
+          <button>Add citizen</button>
+
+        </div>
       </div>
     </div>
     <script src="js/vue.min.js"></script>
-    <script src="js/vue-resource.min.js"></script>
+    <script src="js/vue-material.js"></script>
     <script src="js/app.js"></script>
     <script>
       const app = new Main();
