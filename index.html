@@ -11,59 +11,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="main">
-      <h1>Welcome to the City 17!</h1>
-      <div class="" id="app-instance">
-        <div class="slider">
-          <img src="images/image01.jpg" class="animation-appearOut" />
-          <img src="images/image02.jpg" class="animation-appearIn" />
-          <img src="images/image03.jpg" class="animation-appearOut" />
-        </div>
-        <div class="edit__block" v-show="showEdit">
-          <h3>Edit Zone</h3>
-          
-            <md-input-container>
-              <label>ID</label>
-              <md-input v-model="newPerson.id"></md-input>
-            </md-input-container>
-          <md-input-container>
-              <label>Name</label>
-              <md-input v-model="newPerson.name"></md-input>
-            </md-input-container>
-          <md-input-container>
-              <label>Status</label>
-              <md-input v-model="newPerson.status"></md-input>
-            </md-input-container>
-
-          <md-button class="md-fab md-warn"
-            v-on:click="save()">
-            <md-icon>save</md-icon>
-          </md-button>
-        </div>
-        <div class="content">
-          <h3>Our citizens:</h3>
-          
-          <md-list>
-            <md-list-item v-for="person in citizens">
-              <md-icon>spam</md-icon>
-              <strong>{{person.name}}</strong> -
-              <span>{{person.status}}</span>
-              <a v-on:click.prevent="deleteRow(person.id)" style="color:yellow">delete</a>
-            </md-list-item>
-          </md-list>
-    
-          
-          <md-button class="md-fab" 
-              v-on:click="showEdit = !showEdit" v-show="!showEdit">
-            <md-icon>edit</md-icon>
-          </md-button>
-          
-          
-        </div>
-      </div>
+    <div class="main" id="app-instance">
+      
     </div>
     <script src="js/vue.js"></script>
     <script src="js/vue-material.js"></script>
+    <script src="js/resource.min.js"></script>
     <script src="js/app.js"></script>
     <script>
       const app = new Main();
