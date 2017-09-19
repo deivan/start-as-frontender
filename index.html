@@ -12,11 +12,21 @@
   </head>
   <body>
     <div class="main" id="app-instance">
-      
+      <div class="header">
+        <span class="md-display-4">Database</span>
+      </div>
+      <div class="sidebar">
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+      </div>
+      <div class="content">
+        <router-view></router-view>
+      </div>
     </div>
     <script src="js/vue.js"></script>
     <script src="js/vue-material.js"></script>
-    <script src="js/resource.min.js"></script>
+    <script src="js/vue-resource.min.js"></script>
+    <script src="js/vue-router.js"></script>
     <script src="js/app.js"></script>
     <script>
       const app = new Main();
