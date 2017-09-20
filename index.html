@@ -16,12 +16,22 @@
         <span class="md-display-4">Database</span>
       </div>
       <div class="sidebar">
-        <router-link to="/foo">Go to Foo</router-link>
-        <router-link to="/bar">Go to Bar</router-link>
+        <router-link to="/r61" class="route-item">AND</router-link>
+        <router-link to="/r62" class="route-item">Babushkinsky</router-link>
+        <router-link to="/r63" class="route-item">Jovtnevyi</router-link>
+        <router-link to="/r64" class="route-item">Industrialnyi</router-link>
+        <router-link to="/r65" class="route-item">Kirovstyi</router-link>
+        <router-link to="/r66" class="route-item">Krasnogv</router-link>
+        <router-link to="/r67" class="route-item">Leninskiy</router-link>
+        <router-link to="/r68" class="route-item">Samarskyi</router-link>
       </div>
       <div class="content">
         <router-view></router-view>
       </div>
+    <md-snackbar :md-position="vertical + ' ' + horizontal" ref="snackbar" :md-duration="duration">
+        <span>Remote datatbase could not loaded</span>
+        <md-button class="md-accent" md-theme="default" @click="$refs.snackbar.close()">Retry</md-button>
+    </md-snackbar>
     </div>
     <script src="js/vue.js"></script>
     <script src="js/vue-material.js"></script>

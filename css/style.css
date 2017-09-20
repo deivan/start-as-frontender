@@ -41,8 +41,16 @@ body {
 
 .main .content {
   float: right;
-  width: 550px;
+  width: 500px;
   height: 500px;
+}
+
+.main .content table {
+    border: 1px solid #000;
+}
+
+.main .content table th, .main .content table td {
+    border: 1px solid #666;
 }
 
 .animation-appearIn {
