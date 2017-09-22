@@ -23,58 +23,14 @@ body {
   text-align: center;
 }
 
-.main .sidebar {
-  float: left;
-  width:200px;
-  height:500px;
-  background-color: #ddd;
-}
-
-.main .sidebar .route-item {
-  display: block;
-  width:100%;
-  height:30px;
-  line-height:30px;
-  text-align:right;
-  border-bottom:1px dotted #888;
-}
-
 .main .content {
-  float: right;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
 }
 
-.main .content table {
-    border: 1px solid #000;
-}
-
-.main .content table th, .main .content table td {
-    border: 1px solid #666;
-}
-
-.animation-appearIn {
-  opacity:1;
-  animation-name: appearIn;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-}
-
-.animation-appearOut {
-  opacity:0;
-  animation-name: appearOut;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-}
-
-@keyframes appearIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes appearOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+.example-slot {
+  position: relative;
+  width:100%;
+  height: 100%;
+  display: none;
 }
