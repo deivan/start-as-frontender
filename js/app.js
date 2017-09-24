@@ -1,7 +1,7 @@
 class Animations {
   constructor () {
     console.log('started!');
-    this.init();
+    //this.init();
     //this.example4();
     this.example6();
   }
