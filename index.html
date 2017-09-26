@@ -5,28 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/vue-material.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="main" id="app-instance">
       <div class="header">
-        <span class="md-display-4">Database</span>
-      </div>
-      <div class="sidebar">
-        <router-link to="/foo">Go to Foo</router-link>
-        <router-link to="/bar">Go to Bar</router-link>
+        <input class="" />
+        <button>Connect to chat</button>
       </div>
       <div class="content">
-        <router-view></router-view>
+        <div class="messages"></div>
+        <input class="myMessage" />
+        <button>Send</button>
       </div>
+      <a href="#">Leave chat</a>
     </div>
     <script src="js/vue.js"></script>
-    <script src="js/vue-material.js"></script>
-    <script src="js/vue-resource.min.js"></script>
-    <script src="js/vue-router.js"></script>
     <script src="js/app.js"></script>
     <script>
       const app = new Main();

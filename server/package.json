@@ -1,0 +1,15 @@
+{
+  "name": "developer",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "sockjs": "^0.3.18"
+  },
+  "devDependencies": {},
+  "author": "deivan",
+  "license": "ISC",
+  "description": ""
+}
