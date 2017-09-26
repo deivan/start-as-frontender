@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
-    "sockjs": "^0.3.18"
+    "ws": "latest"
   },
   "devDependencies": {},
   "author": "deivan",
