@@ -3,6 +3,7 @@ body {
   margin: 0;
   color: #444;
   font-size: 15px;
+  color: #000;
 }
 
 .main {
@@ -18,16 +19,24 @@ body {
 
 .main .header {
   width:100%;
-  padding: 20px 5px;
+  padding: 50px;
   position: relative;
   text-align: center;
+  background-color: #ccc;
 }
 
 
 .main .content {
-  float: right;
-  width: 550px;
-  height: 500px;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #444;
+}
+
+.main .content .messages {
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #888;
 }
 
 .animation-appearIn {

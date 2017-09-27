@@ -9,14 +9,24 @@
   </head>
   <body>
     <div class="main" id="app-instance">
-      <div class="header">
-        <input class="" />
-        <button>Connect to chat</button>
+      <div class="header" v-show="!chatStarted">
+        <span>Enter your name: </span>
+        <input class="" v-model="name" />
+        <button @click="join">Connect to chat</button>
       </div>
-      <div class="content">
-        <div class="messages"></div>
-        <input class="myMessage" />
-        <button>Send</button>
+      <div class="content" v-show="chatStarted">
+        <div class="messages">
+          <p  v-for="m in messages">
+            <strong style="color:red" v-if="m.type === 2">{{m.name}}: </strong>
+            <strong v-else>{{m.name}}: </strong>
+            <span>{{m.text}}</span>
+          </p>          
+        </div>
+        <span>Private for: </span>
+        <input v-model="private" />
+        <hr>
+        <input class="myMessage" v-model="msg" />
+        <button @click="send">Send</button>
       </div>
       <a href="#">Leave chat</a>
     </div>
