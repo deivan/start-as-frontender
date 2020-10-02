@@ -7,7 +7,8 @@ window.onload = () => {
 function showDropdown (e) {
   const links = {
     'link-1': 'menu-content-1',
-    'link-2': 'menu-content-2'
+    'link-2': 'menu-content-2',
+    'link-3': 'chat-window-content'
   };
   
   console.log('event',e.target.id);
