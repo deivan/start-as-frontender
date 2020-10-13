@@ -26,8 +26,10 @@
             #eventsExample {
                 position: relative;
                 width:100%;
-                height: 300px;
+                height: 360px;
                 background-color: darksalmon;
+                background-repeat: no-repeat;
+                background-position: center center;
             }
             #eventDispatcher {
                 width:100px;
@@ -198,8 +200,11 @@
                     document.getElementById('eventsExample').addEventListener('click', e => {
                         console.log('click at ', e.clientX, e.clientY);
                     });
+                    document.getElementById('eventsExample').addEventListener('wheel', e => {
+                        document.getElementById('eventsExample').style.backgroundImage='url(deplom.jpg)';
+                    });
 
-                    // i'm Event launcher
+                    // i'm Event launcher or new CustomEvent('build', { 'detail': elem.dataset.time })
                     let localEvent = new Event('click');
                     document.getElementById('eventDispatcher').addEventListener('click', e => {
                         document.getElementById('eventsExample').dispatchEvent(localEvent);
