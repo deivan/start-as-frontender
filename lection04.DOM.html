@@ -19,6 +19,31 @@
                 background-color: #bbb;
                 padding:10px;
             }
+            code {
+                padding:4px;
+                background-color: #eee;
+            }
+            #eventsExample {
+                position: relative;
+                width:100%;
+                height: 300px;
+                background-color: darksalmon;
+            }
+            #eventDispatcher {
+                width:100px;
+                height:100px;
+                margin: 20px auto;
+                background-color: red;
+            }
+            #bubbleEvent {
+                position: absolute;
+                width:100px;
+                height:100px;
+                border-radius: 25%;
+                background-color: green;
+                right: 10px;
+                bottom:10px;
+            }
         </style>
     </head>
     <body>
@@ -155,5 +180,37 @@
             </script>
         </div>
         <p></p>
+        <h2>Кожен елемент може мати івент лиссенер. Івенти мають можливість вспливати догорои по ієрархічній структурі</h2>
+        <p>Зазвичай, щоб дати моливість виконати якийсь скріпт по кліку, викликався атрібут HTML <code>onclick="someFunc()"</code>, але у теперішні часи рекомендується робити дещо інакше.</p>
+        <p>Багато елементів DOM можуть бути налаштовані прийняти (або "почути") ці події та виконати код у відповідь на процес їхньої обробки. Хендлери подій звичайно пов'язані або додаються до різноманітних HTML елементів (таких як &lt;button&gt;, &lt;div&gt;, &lt;span&gt;, і т.п.) при використанні <code>EventTarget.addEventListener()</code>, а це, як правило, замінює використання атрибутів хендлера подій старого HTML. Надалі за необхідності додавання, такі хендлери також можна відключати, якщо потрібно, використовуючи <code>removeEventListener()</code>.</p>
+        <p>Увага: один елемент може мати декілька таких хендлерів, навіть для однієї й тієї ж події - особливо якщо окремо, незалежні модулі коду прикріплять їх, кожний для власних незалежних цілей. (Наприклад, вебсторінка з рекламним модулем та статичним модулем, обидва з яких забезпечують моніторинг перегляду відео.) </p>
+        <div class="example">
+            <div id="eventsExample">
+                Цій блок буде реагувати на деякі події у межах своїх кордонів
+                <div id="bubbleEvent"></div>
+            </div>
+            <div id="eventDispatcher">
+                I'm clicker
+            </div>
+            <script>
+                (function () {
+                    // more events needs there
+                    document.getElementById('eventsExample').addEventListener('click', e => {
+                        console.log('click at ', e.clientX, e.clientY);
+                    });
+
+                    // i'm Event launcher
+                    let localEvent = new Event('click');
+                    document.getElementById('eventDispatcher').addEventListener('click', e => {
+                        document.getElementById('eventsExample').dispatchEvent(localEvent);
+                    });
+
+                    // glug-glug
+                    document.getElementById('bubbleEvent').addEventListener('click', e => {
+                        console.log('internal click');
+                    });
+                })();
+            </script>
+        </div>
     </body>
 </html>
