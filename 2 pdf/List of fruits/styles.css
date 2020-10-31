@@ -1,0 +1,22 @@
+.block1 {
+    background-color: #ed9eae;
+    padding: 15px;
+}
+
+p {
+    font-family: segoe ui;
+    color: white;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #c66376;
+}
+
+mark {
+    font-family: segoe ui;
+    color: white;
+    padding: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #9e354a;
+}

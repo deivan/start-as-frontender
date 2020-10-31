@@ -1,0 +1,78 @@
+.footer {
+    height: 230px;
+    width: 100%;
+    background: #2a4f6e;
+}
+
+.footer-block {
+    height: 150px;
+}
+
+.footer-block-inside {
+    float: left;
+    width: 30%;
+    height: 90%;
+    margin: 10px auto;
+    margin-left: 1.65%;
+    margin-right: 1.65%;
+}
+
+.footer br {
+    color: white;
+}
+
+.footer p {
+    color: white;
+}
+
+.p-flooter-bottom {
+    margin: 0px;
+    text-align: center;
+    size: 5px;
+}
+
+.footer p:hover {
+    text-decoration: underline;
+}
+
+.fb {
+    background: url(images/fb_gray.png);
+    display: block;
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.insta {
+    background: url(images/insta_gray.png);
+    display: block;
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.youtube {
+    background: url(images/youtube_gray.png);
+    display: block;
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.fb:hover {
+    background: url(images/fb.png);
+}
+
+.insta:hover {
+    background: url(images/insta.png);
+}
+
+.youtube:hover {
+    background: url(images/youtube.png);
+}

@@ -1,0 +1,23 @@
+.block{
+    font-size: 13px;
+    font-family: segoe ui;
+    margin: 1px;
+    background: Gainsboro;
+    color: SeaGreen;
+    text-align: center;
+    float: left;
+}
+.block2{
+    font-size: 13px;
+    font-family: segoe ui;
+    margin: 1px;
+    text-align: center;
+    float: left;
+}
+.colRed{
+    color: FireBrick;
+}
+.hMy{
+    text-align: center;
+    font-family: 'Segoe UI';
+}

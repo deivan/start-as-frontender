@@ -1,0 +1,20 @@
+.block1{
+    width: 100%;
+    font-size: 13px;
+    font-family: segoe ui;
+    margin: 5px;
+    margin-left: 2px;
+    text-align: left;
+    float: left;
+    /*border: 1px solid red;*/
+}
+.block2{
+    padding: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 2px;
+    background: Gainsboro;
+    float: left;
+    text-align: center;
+    /*border: 1px solid red;*/
+}

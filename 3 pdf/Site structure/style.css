@@ -1,0 +1,64 @@
+.header {
+    display: block;
+    height: 70px;
+    margin: 2%;
+    background: #923158;
+}
+
+.menu {
+    display: block;
+    height: 30px;
+    margin: 2%;
+    margin-bottom: 0px;
+    background: #6e1237;
+}
+
+.block-left {
+    margin: 2%;
+    width: 26%;
+    height: 300px;
+    float: left;
+}
+
+.block-left-inside {
+    margin-bottom: 30px;
+    background: #b65b80;
+}
+
+.main-container {
+    margin: 2%;
+    width: 46%;
+    height: 300px;
+    float: left;
+    background: #b65b80;
+}
+
+.main-container-inside {
+    margin: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 80px;
+    background: #db92af;
+}
+
+.block-ride {
+    margin: 2%;
+    width: 16%;
+    height: 300px;
+    float: left;
+    background: #b65b80;
+}
+
+.footer {
+    height: 30px;
+    margin: 2%;
+    margin-top: 0px;
+    background: #6e1237;
+}
+
+h2 {
+    margin: 0px;
+    margin-left: 20px;
+    color: white;
+    font-family: segoe ui;
+}
