@@ -45,3 +45,45 @@ body {
   font-weight: 900;
   border-radius: 8px;
 }
+
+.advertize {
+  position: absolute;
+  width:150px;
+  height:40px;
+  text-align:center;
+}
+
+.block1 {
+  left:200px;
+  top: 520px;
+  background-color: plum;
+  color: white;
+}
+
+.block2 {
+  left:100px;
+  top: 360px;
+  background-color: yellow;
+  color: red;
+}
+
+.block3 {
+  left:300px;
+  top: 500px;
+  background-color: white;
+  color: #888;
+}
+
+.block4 {
+  left:500px;
+  top: 550px;
+  background-color: purple;
+  color: green;
+}
+
+.block5 {
+  left:20px;
+  top: 600px;
+  background-color: plum;
+  color:blue;
+}
