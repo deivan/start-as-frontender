@@ -3,55 +3,72 @@ body {
   margin: 0;
   color: #444;
   font-size: 15px;
+  background-color: #000;
+  color: #eee;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .main {
   position: relative;
-  width:800px;
-  overflow-y: auto;
+  width:50%;
+  min-width:480px;
+  min-height: 400px;
   margin: 20px auto;
-  padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;
-  background-color: #fff;
+  overflow: hidden;
 }
 
-.main .header {
+.startBlock {
+  position: absolute;
   width:100%;
-  padding: 20px 5px;
-  position: relative;
-  text-align: center;
+  height:100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004;
 }
 
-
-.main .content {
-  float: right;
-  width: 550px;
-  height: 500px;
+.startBlock__input {
+  width: 200px;
+  padding: 9px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
 
-.animation-appearIn {
-  opacity:1;
-  animation-name: appearIn;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
+.startBlock__button {
+  padding: 8px;
+  margin-left: 8px;
+  font-weight: 900;
+  cursor:pointer;
 }
 
-.animation-appearOut {
-  opacity:0;
-  animation-name: appearOut;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
+.startBlock__button:hover {
+  color: #b00;
 }
 
-@keyframes appearIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.content {
+  width:calc(100% - 40px);
+  height:100%;
+  padding: 20px;
+  background-color: cadetblue;
 }
 
-@keyframes appearOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+.content__messages {
+  width:100%;
+  min-height: 320px;
+  max-height: 600px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid yellow;
+  overflow-y: auto;
+}
+
+.content__message {
+  width: 50%;
 }
