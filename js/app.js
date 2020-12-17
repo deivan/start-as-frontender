@@ -1,13 +1,13 @@
 class Animations {
   constructor () {
     console.log('started!');
-    //this.init();
-    //this.example4();
+    this.init();
+    this.example4();
     this.example6();
   }
 
   init () {
-    document.getElementById('select-animation').addEventListener('change', (e) => {
+    document.getElementById('select-animation').addEventListener('change', e => {
       let a = document.querySelectorAll('.example-slot');
       for (let i = 0; i < a.length; ++i) 
         a[i].style.display = 'none';
@@ -15,23 +15,22 @@ class Animations {
     });
   }
   
-  example4 () { // Good example for dirty code
-    var byline = document.getElementById('byline');     // Find the H2
-    bylineText = byline.innerHTML;                                      // Get the content of the H2
-    bylineArr = bylineText.split('');                                   // Split content into array
-    byline.innerHTML = '';                                                      // Empty current content
+  example4 () {
+    let span, letter,
+        byline = document.getElementById('byline'),
+        bylineText = byline.innerHTML,
+        bylineArr = bylineText.split('');
 
-    var span;                   // Create variables to create elements
-    var letter;
+    byline.innerHTML = '';
 
-    for(i=0;i<bylineArr.length;i++){                                    // Loop for every letter
-      span = document.createElement("span");                    // Create a <span> element
-      letter = document.createTextNode(bylineArr[i]);   // Create the letter
-      if(bylineArr[i] == ' ') {                                             // If the letter is a space...
-        byline.appendChild(letter);                 // ...Add the space without a span
+    for (let i = 0; i < bylineArr.length; i++) {
+      span = document.createElement("span");
+      letter = document.createTextNode(bylineArr[i]);
+      if (bylineArr[i] == ' ') {
+        byline.appendChild(letter);
       } else {
-            span.appendChild(letter);                       // Add the letter to the span
-        byline.appendChild(span);                   // Add the span to the h2
+        span.appendChild(letter);
+        byline.appendChild(span);
       }
     }
   }
@@ -47,7 +46,6 @@ class Animations {
       else {
           fullpage.classList.add('night');
           switcher.classList.add('switched');
-
       }
     });
   }
