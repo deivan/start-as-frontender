@@ -121,7 +121,7 @@ body {
 
 /* General styles and layout */
 div#example-4 {
-  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  background: #000 url(http://cssanimation.rocks/demo/starwars/images/bg.jpg);
   height:500px;
 }
 
