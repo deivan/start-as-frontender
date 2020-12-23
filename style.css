@@ -1,0 +1,343 @@
+.display{
+    display: inline-block;
+}
+
+.page1{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    align-content: center;
+}
+
+.page1_when{
+    text-align: center;
+}
+
+.page1_img{
+    display: inline-block;
+    margin-left:860px;
+}
+
+.page1_description{
+    color:rgb(129, 129, 129);
+    margin-top: 100px;
+    text-align: center;
+}
+
+.page1_button1{
+    width: 350px;
+    height: 80px;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: 500px;
+    text-align: center;
+    display: inline-block;
+}
+
+.page1_button1:hover{
+    width: 350px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+    margin-top: 50px;
+    margin-left: 500px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page1_button2{
+    width: 350px;
+    height: 80px;
+    background-color: black;
+    margin-top: 0px;
+    margin-left: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.page1_button2:hover{
+    width: 350px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+    margin-top: 0px;
+    margin-left: 200px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.page1_button_text{
+    color: white;
+
+}
+
+.page1_back_to_basket{
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin-top: 200px;
+}
+
+.page1_arrow{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+}
+
+.page1_arrow:hover{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.page2{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.page2_where{
+    text-align: center;
+}
+
+.page2_img{
+    display: inline-block;
+    margin-left:860px;
+}
+
+.page2_description{
+    color:rgb(129, 129, 129);
+    margin-top: 100px;
+    text-align: center;
+}
+
+.page2_button1{
+    width: 350px;
+    height: 80px;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: 500px;
+    text-align: center;
+    display: inline-block;
+}
+
+.page2_button1:hover{
+    width: 350px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+    margin-top: 50px;
+    margin-left: 500px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page2_button2{
+    width: 350px;
+    height: 80px;
+    background-color: black;
+    margin-top: 0px;
+    margin-left: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.page2_button2:hover{
+    width: 350px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+    margin-top: 0px;
+    margin-left: 200px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.page2_button_text{
+    color: white;
+
+}
+
+.page2_back_to_basket{
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin-top: 200px;
+}
+
+.back_to_basket_link{
+    color: rgb(219, 219, 219);
+}
+
+.page2_arrow{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+}
+
+.page2_arrow:hover{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+
+.page3{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.page3_where{
+    text-align: center;
+}
+
+.page3_img{
+    display: inline-block;
+    margin-left:890px;
+}
+
+.page3_description{
+    color:rgb(129, 129, 129);
+    margin-top: 100px;
+    text-align: center;
+}
+
+.link_intxt{
+    color:rgb(129, 129, 129);
+}
+
+.page3_button{
+    width: 350px;
+    height: 80px;
+    background-color: black;
+    margin-top: 250px;
+    margin-left: 780px;
+    text-align: center;
+    display: inline-block;
+}
+
+.page3_button:hover{
+    width: 350px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+    margin-top: 250px;
+    margin-left: 780px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page3_button_text{
+    color: white;
+
+}
+
+.page3_back_to_basket{
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page3_arrow{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+}
+
+.page3_arrow:hover{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.page3_date{
+    display: inline-block;
+    margin-left: 880px;
+}
+
+
+.page4{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.page4_time{
+    text-align: center;
+}
+
+.page4_img{
+    display: inline-block;
+    margin-left:890px;
+}
+
+.page4_description{
+    color:rgb(129, 129, 129);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link_intxt{
+    color:rgb(129, 129, 129);
+}
+
+.page4_button{
+    width: 350px;
+    height: 80px;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: 770px;
+    text-align: center;
+    display: inline-block;
+}
+
+.page4_button:hover{
+    width: 350px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+    margin-top: 50px;
+    margin-left: 770px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page4_button_text{
+    color: white;
+
+}
+
+.page4_back_to_basket{
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page4_arrow{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+}
+
+.page4_arrow:hover{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
