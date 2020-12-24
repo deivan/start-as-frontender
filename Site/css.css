@@ -1,0 +1,105 @@
+body, html{
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+.ddd {
+    background: white;
+    width: 300px;
+    height: 40px;
+    outline: none;
+    border-bottom:3px solid black ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#asd {
+    text-align: center;
+    font-size: 35px;
+    
+}
+img {
+    position: absolute;
+    left: 50%;
+    margin-left: -88px;
+}
+#wlr {
+    text-align: center;
+    font-size:20px;
+}
+#sure1 {
+background-color: black;
+width: 210px;
+height: 40px;
+text-align: center;
+color: white;
+font-weight:bold ;
+}
+
+#sure2 {
+    background-color: black;
+width: 240px;
+height: 40px;
+text-align: center;
+color: white;
+font-weight:bold ;
+}
+#why {
+    background-color: white;
+    border: 2px solid black;
+    width: 75px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+#back {
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+
+    
+}
+.opasity {
+    opacity: 0.5;
+}
+
+#calendar2 {
+  width: 100%;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
+}
+
+
+div {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
