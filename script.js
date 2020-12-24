@@ -61,6 +61,6 @@ jQuery(document).ready(function($){
         document.getElementById("minute").innerHTML = minute;
     });
     $('#button-final').click(function(){
-        alert("Thank you for yoir choise!");
+        alert("Thank you for your choise!");
     });
 });
