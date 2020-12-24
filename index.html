@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+
+
+<body>
+    <button id="button" class="move">BACK</button>
+    
+    <div class="page1" id="0">
+        <div class="when">When?</div>
+        <div class="img1"><img src="img/order.png" ></div>
+        <div class="page1small">When would you like pick a order?</div>
+        <div class="buttons">
+            <button id="button_to2" class="movenext">WHEN I'M LEAVING IRELAND</button>
+            <button id="button_to2_2" class="movenext">WHEN I'M ARRIVING IN IRELAND</button>
+        </div>
+            
+
+    </div>
+    <div class="page2" id="1">
+        <div class="when">Where?</div>
+        <div class="img1"><img src="img/ireland.png" ></div>
+        <div class="page1small">Where do you want pick a order?<p>Unfortunately we cannot facilitate any orders for Cork between the 18th of december and the 4th of January. We Apologise for any inconvenience caused.</p></div>
+        <div class="page1small">When would you like pick a order?</div>
+        <div class="buttons">
+            <button id="button_to3" class="movenext">DUBLIN</button>
+            <button id="button_to3_2" class="movenext">CORK</button></div>
+    </div>
+    <div class="page3" id="2">
+        <div class="when">What day?</div>
+        <div class="img1"><img src="img/calendar.png" ></div>
+        <div class="page1small">When would you like pick a order?</div>
+        <form>
+            <div class="img1">
+                <input type="date" name="calendar" value="2020-12-24"
+             max="2020-12-31" min="2020-12-20">
+                </div>
+        </form>
+        <div class="buttons">
+            <button id="button_to4" class="movenext">SUNDAY, 20 DECEMBER 2020</button>
+        </div>
+    </div>
+    <div class="page4" id="3">
+        <div class="when">What time?</div>
+        <div class="img1"><img src="img/time.png" ></div>
+        <div class="page1small">What time would you like to pick up your order. </div>
+        <div class="page1small_">Please note the collection desk opening hours are as follows;</div>
+        <div class="page1smallbold">DUBLIN TERMINAL 1</div>
+        <div class="page1small_">Arrivals: 06.30hrs - 21.00hrs</div>
+        <div class="page1small_">Departures: 04.00hrs - 20.00hrs</div>
+        <div class="page1smallbold">DUBLIN TERMINAL 2</div>
+        <div class="page1small_">Arrivals: 04.00hrs - 19.00hrs</div>
+        <div class="page1small_">Departures: 04.00hrs - 19.00hrs</div>
+        <div class="page1smallbold">Cork</div>
+        <div class="page1small_">Please note that Cork Airport has varying opening hours over Christmas. See Here for details</div>
+        <div class="page1smallbold">Select the time</div>
+        <div class="minutes">
+            <button id="minutsup" class="movenext">+</button>
+                <div id="minute"></div>
+            <button id="minutsdown"class="movenext" >-</button>
+        </div>
+        <div class="minutes">
+            <button id="hoursup" class="movenext">+</button>
+            <div id="hourse"></div>
+            <button id="hoursdown" class="movenext">-</button>
+        </div>
+        <div class="buttons">
+            
+            <div class="popup" onclick="myFunction()">PROCEED
+  <span class="popuptext" id="myPopup">Thank you for yoir choise!</span>
+</div>
+        </div>
+    </div>
+    <div class="link"><a href="#" class="link">BACK TO BASKET</a></div> 
+
+<script src="Script.js"></script>
+</body>
