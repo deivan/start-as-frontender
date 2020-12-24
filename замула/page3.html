@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Выравнивание по центру</title>
+  <link href="css/page1.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ </head>
+ <body>
+    <div class="left">
+       <a href="page2.html">   <img src="https://img.icons8.com/ios/50/000000/back--v1.png"/></a>
+      </div>
+  <div class="text">
+     <p>What day </p>
+     <img src="https://img.icons8.com/material-sharp/96/000000/calendar--v1.png"/>
+  </div>
+  <div class="text1">
+      <p>Please note that Cork Airport has varying opening  hours over the Christmas period .See Here for detalis </p>
+      <p>Unfortunately we cannot facilitate any orders for Cork between the 18 December and the 4th of January
+
+      </p>
+      <p>We Apologize for any inconvenience caused </p>
+    
+      <style type="text/css">
+        /* Таблица календарика */
+        .calendar {
+          border: 1px solid #909090;
+          border-collapse: collapse;
+          font-family: Arial;
+          font-size: 11px;
+        }
+        /* Заголовок */
+        .calendar th {
+          text-align: center;
+          width: 26px;
+          height: 20px;
+          background: #D0D0D0;
+          color: #000000;
+          border: 1px solid #909090;   
+        }
+        /* Заголовок праздника */
+        .calendar th.holiday {
+          color: #FF0000;
+        }
+        /* Ячейка дня */
+        .calendar td {
+          text-align: right;
+          width: 20px;
+          height: 18px;
+          padding-right: 4px;
+          border: 1px solid #909090;
+          text-align: right;
+          cursor: pointer;  font-size: 12px;
+        }
+        /* Затемненный день */
+        .calendar td.grayed {
+          background: #F0F0F0;
+          cursor: auto !important;
+        }
+        /* Выбранный день */
+        .calendar td.selected {
+          background: #6DAFBF;
+          color: #FFFFFF;
+          box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset;
+        }
+        /* Праздничный день */
+        .calendar td.holiday {
+          color: #FF0000;
+        }
+        /* Кнопки навигации */
+        .calendar td.navigation {
+          text-align: center;
+          border: 0px none !important;
+          font-size: 17px;
+          cursor: pointer;
+          white-space: nowrap;        
+        }
+        </style>
+        
+        
+        
+                <div align =center>
+        
+                <div style="height:150px;"><div id="calendar_table"></div></div>
+                </div>
+        
+        
+        <script type="text/javascript">
+        
+        calendar = {};
+        
+        // Названия месяцев
+        calendar.monthName=[
+          'Январь', 'Февраль', 'Март', 'Апрель',
+          'Май', 'Июнь', 'Июль', 'Август',
+          'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+        ];
+        
+        // Названия дней недели
+        calendar.dayName=[
+          'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'
+        ];
+        
+        // Выбранная дата
+        calendar.selectedDate = {
+          'Day' : null,
+          'Month' : null,
+          'Year' : null
+        };
+        
+        // ID элемента для размещения календарика
+        calendar.element_id=null;
+        
+        // Выбор даты
+        calendar.selectDate = function(day,month,year) {
+          calendar.selectedDate={
+            'Day' : day,
+            'Month' : month,
+            'Year' : year
+          };
+          calendar.drawCalendar(month,year);
+        }
+        
+        // Отрисовка календарика на выбранный месяц и год
+        calendar.drawCalendar = function(month,year) {
+          var tmp='';
+          tmp+='<table class="calendar" cellspacing="0" cellpadding="0">';
+        
+          // Месяц и навигация
+          tmp+='<tr>';
+          tmp+='<td class="navigation" '+
+               'onclick="calendar.drawCalendar('+(month>1?(month-1):12)+
+               ','+(month>1?year:(year-1))+');">◄<\/td>';
+          tmp+='<td colspan="5" class="navigation" '+
+               'onclick="calendar.drawCalendar('+
+               calendar.selectedDate.Month+','+
+               calendar.selectedDate.Year+');">'+
+               calendar.monthName[(month-1)]+' - '+year+'<\/td>';
+          tmp+='<td class="navigation" '+
+               'onclick="calendar.drawCalendar('+(month<12?(month+1):1)+
+               ','+(month<12?year:(year+1))+');">►<\/td>';
+          tmp+='<\/tr>';
+        
+          // Шапка таблицы с днями недели
+          tmp+='<tr>';
+          tmp+='<th>'+calendar.dayName[0]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[1]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[2]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[3]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[4]+'<\/th>';
+          tmp+='<th class="holiday">'+calendar.dayName[5]+'<\/th>';
+          tmp+='<th class="holiday">'+calendar.dayName[6]+'<\/th>';
+          tmp+='<\/tr>';
+        
+          // Количество дней в месяце
+          var total_days = 32 - new Date(year, (month-1), 32).getDate();
+          // Начальный день месяца
+          var start_day = new Date(year, (month-1), 1).getDay();
+          if (start_day==0) { start_day=7; }
+          start_day--;
+          // Количество ячеек в таблице
+          var final_index=Math.ceil((total_days+start_day)/7)*7;
+        
+          var day=1;
+          var index=0;
+          do {
+            // Начало строки таблицы
+            if (index%7==0) {
+              tmp+='<tr>';
+            }
+            // Пустые ячейки до начала месяца или после окончания
+            if ((index<start_day) || (index>=(total_days+start_day))) {
+              tmp+='<td class="grayed"> <\/td>';
+            }
+            else {
+              var class_name='';
+              // Выбранный день
+              if (calendar.selectedDate.Day==day &&
+                  calendar.selectedDate.Month==month &&
+                  calendar.selectedDate.Year==year) {
+                class_name='selected';
+              }
+              // Праздничный день
+              else if (index%7==6 || index%7==5) {
+                class_name='holiday';
+              }
+              // Ячейка с датой
+              tmp+='<td class="'+class_name+'" '+
+                   'onclick="calendar.selectDate('+
+                   day+','+month+','+year+');">'+day+'<\/td>';
+              day++;
+            }
+            // Конец строки таблицы
+            if (index%7==6) {
+              tmp+='<\/tr>';
+            }
+            index++;
+          }
+          while (index<final_index);
+        
+          tmp+='<\/table>';
+        
+          // Вставить таблицу календарика на страницу
+          var el=document.getElementById(calendar.element_id);
+          if (el) {
+            el.innerHTML=tmp;
+          }
+        }
+        
+        // ID элемента для размещения календарика
+        calendar.element_id = 'calendar_table';
+        
+        // По умолчанию используется текущая дата
+        calendar.selectedDate={
+          'Day' : new Date().getDate(),
+          'Month' : parseInt(new Date().getMonth())+1,
+          'Year' : new Date().getFullYear()
+        };
+        
+        // Нарисовать календарик
+        calendar.drawCalendar(
+          calendar.selectedDate.Month,
+          calendar.selectedDate.Year
+        );
+        </script>
+        
+        
+       
+       
+        <div class="flex-container">
+          <div class="flex-item">
+              <p><a href="page4.html">Next</a> </p>
+          </div>
+         
+        </div>
+      <div class="text1">
+        <p><u>Back to basket</u></p>
+        
+     </div>
+ </body>
+</html>
