@@ -1,0 +1,216 @@
+.back{
+    transform: rotate(90deg);
+    position: absolute;
+    cursor: pointer;
+    padding: 60px;
+}
+.h2{ 
+     text-align: center;
+    font-size: 25pt ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 60px;
+   
+    
+}
+.text{
+    text-align: center; 
+    font-size: 20pt ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   padding:20px
+}
+.text4{
+    text-align: center; 
+    color:rgb(78, 78, 78);
+    font-size: 12pt ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   padding:20px
+}
+.text4-1{
+    text-align: center; 
+    color:rgb(0, 0, 0);
+    font-size: 12pt ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   padding:20px
+}
+.img{
+    text-align: center; 
+    padding:20pt;
+}
+.button1{
+    background-color: black;
+    width: 30%;
+    height: 70px;
+    float: left;
+    position: absolute;
+    left: 17%;
+    margin-top: 100px;
+    
+}
+.button2{
+    background-color: black;
+    width: 30%;
+    height: 70px;
+    float: left;
+    position: absolute;
+    right: 17%;
+    margin-top: 100px;
+    
+}
+.button1page2{
+    background-color: black;
+    width: 25%;
+    height: 70px;
+    float: left;
+    position: absolute;
+    left: 22%;
+    margin-top: 100px;
+    
+}
+.button2page2{
+    background-color: black;
+    width: 25%;
+    height: 70px;
+    float: left;
+    position: absolute;
+    right: 22%;
+    margin-top: 100px;
+    
+}
+
+
+.button-text{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 50%;
+    margin-top: -0.625em;
+    font-size: 17pt ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.buttoncal-text{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 30%;
+    margin-top: -0.700em;
+    font-size: 17pt ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#page2{
+    display: none;
+}
+#page3{
+    display: none;
+}
+#page4{
+    display: none;
+}
+.back-to-basket{
+    text-align: center;
+    padding-top: 300px;
+    color: rgb(192, 192, 192);
+    font-size:15pt;
+}
+.button-calendar{
+    background-color: black;
+    width: 10%;
+    height: 60px;
+    position:absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 90%;
+
+}
+.calendar_date {
+    display: inline-block;
+    margin-left: 850px;
+    
+    position: absolute;
+}
+.block{
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.choose-time{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+}
+.choose-time-hour{
+    position: absolute;
+    border: 4px solid black;
+    width: 100px;
+    height: 50px;
+    left: 0%;
+    float: left;
+}
+.choose-time-minutes{
+    position: absolute;
+    border: 4px solid black;
+    width: 100px;
+    height: 50px;
+    right: 0%;
+}
+.up{
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    cursor: pointer;
+
+}
+.down{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    cursor: pointer;
+}
+#hour{
+    position: absolute;
+    left: 20%;
+}
+#minute{
+    position: absolute;
+    left: 20%;
+}
+
+.button3{
+    background-color: black;
+    width: 50%;
+    height: 75px;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin:auto;
+    top: 50%;
+    cursor: pointer;
+}
+.text-button2{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 35%;
+    margin-top: -0.625em;
+    font-size: 15pt;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+}
+.time{
+    position: relative;
+    left: 50%;
+    bottom: 15%;
+    font: 15pt sans-serif;
+}
+#date-choose-time{
+	width: 250px;
+	margin: 0 auto;
+}
