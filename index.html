@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body> 
+        <div id="page1">
+            <img class="comeback" src="img/arrow.svg">
+            <h1>When?</h1>
+            <p class="text"><img src="img/order.png"></p>
+            <p class="text">When would you like to pick up your order</p>
+            <div class="KnopkaRite knopkaVpered1"><p class="text-knopka">WHEN I'M LEAVING IRELAND</p></div>
+            <div class="KnopkaLeft knopkaVpered1"><p class="text-knopka">WHEN I'M ARRIVING IN IRELAND</p></div>
+            <p class="back-to-basket"><a style="color: black" href="#">BACK TO BASKET</a></p>
+            
+        </div>
+        <div id="page2">
+            <img id="comeback2" class="comeback" src="img/arrow.svg">
+            <h1>When?</h1>
+            <p class="text"><img src="img/ireland.png"></p>
+            <p class="text">Where do you want to pick up your order?<br>
+                Unfortunately we cannot facilitate any orders for Cork between the 18th of December and the 4th of January.<br>
+                We Apologise for any inconvenience caused.</p>
+            <div class="KnopkaRite knopkaVpered2"><p class="text-knopka">DUBLIN</p></div>
+            <div class="KnopkaLeft knopkaVpered2"><p class="text-knopka">CORK</p></div>
+            <p class="back-to-basket"><a style="color: black" href="#">BACK TO BASKET</a></p>
+        </div>
+        <div id="page3">
+            <img id="comeback3" class="comeback" src="img/arrow.svg">
+            <h1>What Day?</h1>
+            <p class="text"><img src="img/calendar.png"></p>
+            <p class="text">Please note that Cork Airport has varying opening hours over the Christmas period. See Here for details</p>
+                <div class="knopka-po-sredine" id="knopkaVpered3"><p class="text-knopka2">NEXT</p></div>
+                <p class="back-to-basket"><a style="color: black" href="#">BACK TO BASKET</a></p>
+        </div>
+        <div id="page4">
+            <img id="comeback4" class="comeback" src="img/arrow.svg">
+            <h1>What Time?</h1>
+            <p class="text"><img src="img/time.png"></p>
+            <p class="text">What time would you like to pick up your order.<br>
+                Please note the collection desk opening hours are as follows;<br>
+                DUBLIN TERMINAL 1<br>
+                Arrivals: 06.30hrs - 21.00hrs<br>
+                Departures: 04.00hrs - 20.00hrs<br>
+                DUBLIN TERMINAL 2<br>
+                Arrivals: 04.00hrs - 19.00hrs<br>
+                Departures: 04.00hrs - 19.00hrs<br>
+                CORK<br>
+                Please note that Cork Airport has varying opening hours over the Christmas period.See Here for details<br>
+                
+                Select the time</p>
+                <div class="block">
+                    <div class="timepicker">
+                        <div class="timepicker-hour">
+                            <img class="up" id="up-hour" src="img/arrow.svg">
+                            <img class="down" id="down-hour" src="img/arrow.svg">
+                            <p><div id="hour"></div></p>
+                            <p class="time">h</p>
+                        </div>
+                        <div class="timepicker-minutes">
+                            <img class="up" id="up-minute" src="img/arrow.svg">
+                            <img class="down" id="down-minute" src="img/arrow.svg">
+                            <p><div id="minute"></div></p>
+                            <p class="time">m</p>
+                        </div>
+                    </div>
+                    <div class="knopka-po-sredine">
+                        <p class="text-knopka2" id="button-final">PROCED</p>
+                    </div>
+                    <p class="back-to-basket"><a style="color: black" href="#">BACK TO BASKET</a></p>
+                </div>
+        </div>
+    </body>
+    
+</html>
