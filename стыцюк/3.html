@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+ 
+ </head>
+ <body>
+    <div class="back">
+       <a href="2.html">   <img src="https://img.icons8.com/ios/50/000000/back--v1.png"/></a>
+      </div>
+  <div class="text">
+     <p>What day </p>
+     <img src="https://v1.iconsearch.ru/uploads/icons/ecqlipse2/128x128/calendar-objectdock.png"/>
+  </div>
+  <div class="smaller_text">
+      <p>Please note that Cork Airport has varying opening  hours over the Christmas period .See Here for detalis </p>
+      <p>Unfortunately we cannot facilitate any orders for Cork between the 18 December and the 4th of January
+
+      </p>
+      <p>We Apologize for any inconvenience caused </p>
+                <div align =center>
+               <div id="calendar_table"></div>
+                </div>
+        
+        <script type="text/javascript">
+        
+        calendar = {};
+        
+   
+        calendar.monthName=[
+          'Январь', 'Февраль', 'Март', 'Апрель',
+          'Май', 'Июнь', 'Июль', 'Август',
+          'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+        ];
+        
+    
+        calendar.dayName=[
+          'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'
+        ];
+        
+     
+        calendar.selectedDate = {
+          'Day' : null,
+          'Month' : null,
+          'Year' : null
+        };
+        
+      
+        calendar.element_id=null;
+
+        calendar.selectDate = function(day,month,year) {
+          calendar.selectedDate={
+            'Day' : day,
+            'Month' : month,
+            'Year' : year
+          };
+          calendar.drawCalendar(month,year);
+        }
+    
+        calendar.drawCalendar = function(month,year) {
+          var tmp='';
+          tmp+='<table class="calendar" cellspacing="0" cellpadding="0">';
+      
+          tmp+='<tr>';
+          tmp+='<td class="navigation" '+
+               'onclick="calendar.drawCalendar('+(month>1?(month-1):12)+
+               ','+(month>1?year:(year-1))+');">◄<\/td>';
+          tmp+='<td colspan="5" class="navigation" '+
+               'onclick="calendar.drawCalendar('+
+               calendar.selectedDate.Month+','+
+               calendar.selectedDate.Year+');">'+
+               calendar.monthName[(month-1)]+' - '+year+'<\/td>';
+          tmp+='<td class="navigation" '+
+               'onclick="calendar.drawCalendar('+(month<12?(month+1):1)+
+               ','+(month<12?year:(year+1))+');">►<\/td>';
+          tmp+='<\/tr>';
+       
+          tmp+='<tr>';
+          tmp+='<th>'+calendar.dayName[0]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[1]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[2]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[3]+'<\/th>';
+          tmp+='<th>'+calendar.dayName[4]+'<\/th>';
+          tmp+='<th class="holiday">'+calendar.dayName[5]+'<\/th>';
+          tmp+='<th class="holiday">'+calendar.dayName[6]+'<\/th>';
+          tmp+='<\/tr>';
+        
+      
+          var total_days = 32 - new Date(year, (month-1), 32).getDate();
+
+          var start_day = new Date(year, (month-1), 1).getDay();
+          if (start_day==0) { start_day=7; }
+          start_day--;
+ 
+          var final_index=Math.ceil((total_days+start_day)/7)*7;
+        
+          var day=1;
+          var index=0;
+          do {
+
+            if (index%7==0) {
+              tmp+='<tr>';
+            }
+ 
+            if ((index<start_day) || (index>=(total_days+start_day))) {
+              tmp+='<td class="grayed"> <\/td>';
+            }
+            else {
+              var class_name='';
+
+              if (calendar.selectedDate.Day==day &&
+                  calendar.selectedDate.Month==month &&
+                  calendar.selectedDate.Year==year) {
+                class_name='selected';
+              }
+ 
+              else if (index%7==6 || index%7==5) {
+                class_name='holiday';
+              }
+
+              tmp+='<td class="'+class_name+'" '+
+                   'onclick="calendar.selectDate('+
+                   day+','+month+','+year+');">'+day+'<\/td>';
+              day++;
+            }
+            if (index%7==6) {
+              tmp+='<\/tr>';
+            }
+            index++;
+          }
+          while (index<final_index);
+        
+          tmp+='<\/table>';
+
+          var el=document.getElementById(calendar.element_id);
+          if (el) {
+            el.innerHTML=tmp;
+          }
+        }
+        
+        calendar.element_id = 'calendar_table';
+
+        calendar.selectedDate={
+          'Day' : new Date().getDate(),
+          'Month' : parseInt(new Date().getMonth())+1,
+          'Year' : new Date().getFullYear()
+        };
+ 
+        calendar.drawCalendar(
+          calendar.selectedDate.Month,
+          calendar.selectedDate.Year
+        );
+        </script>
+        
+        
+       
+       
+        <div class="button">
+          <div class="button_item">
+              <p><a href="4.html">continue</a> </p>
+          </div>
+         
+        </div>
+        <div class="smaller_text">
+            <p>Back to basket </p>
+            
+         </div>
+ </body>
+</html>
