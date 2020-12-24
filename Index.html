@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+    <body> 
+        <div id="page1">
+            <img class="back-icon" src="img/arrow.svg">
+            <h1>When?</h1>
+            <p class="text"><img src="img/order.png"></p>
+            <p class="text">When would you like to pick up your order</p>
+            <div class="button1 button-next-page1"><p class="text-button">WHEN I'M LEAVING IRELAND</p></div>
+            <div class="button2 button-next-page1"><p class="text-button">WHEN I'M ARRIVING IN IRELAND</p></div>
+            
+        </div>
+        <div id="page2">
+            <img id="back-icon-page2" class="back-icon" src="img/arrow.svg">
+            <h1>When?</h1>
+            <p class="text"><img src="img/ireland.png"></p>
+            <p class="text">Where do you want to pick up your order?<br>
+                Unfortunately we cannot facilitate any orders for Cork between the 18th of December and the 4th of January.<br>
+                We Apologise for any inconvenience caused.</p>
+            <div class="button1 button-next-page2"><p class="text-button">DUBLIN</p></div>
+            <div class="button2 button-next-page2"><p class="text-button">CORK</p></div>
+        </div>
+        <div id="page3">
+            <img id="back-icon-page3" class="back-icon" src="img/arrow.svg">
+            <h1>What Day?</h1>
+            <p class="text"><img src="img/calendar.png"></p>
+            <p class="text">Please note that Cork Airport has varying opening hours over the Christmas period. See Here for details</p>
+            <div class="calendar">
+                <div  id="datepicker"><table id="calendar2">
+                    <thead>
+                      <tr><td>‹<td colspan="5"><td>›
+                      <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                    <tbody>
+                  </table></div>
+                <div class="button-calendar" id="button-next-page3"><p class="text-button2">NEXT</p></div>
+            </div>
+        </div>
+        <div id="page4">
+            <img id="back-icon-page4" class="back-icon" src="img/arrow.svg">
+            <h1>What Time?</h1>
+            <p class="text"><img src="img/time.png"></p>
+            <p class="text">What time would you like to pick up your order.<br>
+                Please note the collection desk opening hours are as follows;<br>
+                DUBLIN TERMINAL 1<br>
+                Arrivals: 06.30hrs - 21.00hrs<br>
+                Departures: 04.00hrs - 20.00hrs<br>
+                DUBLIN TERMINAL 2<br>
+                Arrivals: 04.00hrs - 19.00hrs<br>
+                Departures: 04.00hrs - 19.00hrs<br>
+                CORK<br>
+                Please note that Cork Airport has varying opening hours over the Christmas period.See Here for details<br>
+                
+                Select the time</p>
+                <div class="block">
+                    <div class="timepicker">
+                        <div class="timepicker-hour">
+                            <img class="up" id="up-hour" src="img/arrow copy.svg">
+                            <img class="down" id="down-hour" src="img/arrow copy.svg">
+                            <p><div id="hour"></div></p>
+                            <p class="time">h</p>
+                        </div>
+                        <div class="timepicker-minutes">
+                            <img class="up" id="up-minute" src="img/arrow copy.svg">
+                            <img class="down" id="down-minute" src="img/arrow copy.svg">
+                            <p><div id="minute"></div></p>
+                            <p class="time">m</p>
+                        </div>
+                    </div>
+                    <div class="button3">
+                        <p class="text-button2" id="button-final">PROCED</p>
+                    </div>
+                </div>
+        </div>
+        <div >
+            <p class="back-to-basket"><a style="color: black" href="#">BACK TO BASKET</a></p>
+        </div>
+    </body>
+    
+</html>
