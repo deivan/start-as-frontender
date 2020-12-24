@@ -1,0 +1,176 @@
+.callback-icon{
+    transform: rotate(90deg);
+    position: absolute;
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;  
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+}
+.text{
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+    color: #343434;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    font-family: 'Orienta', sans-serif;
+}
+.button-left{
+    background-color: black;
+    width: 20%;
+    height: 75px;
+    float: left;
+    position: absolute;
+    left: 25%;
+    margin-top: 75px;
+    cursor: pointer;
+}
+.button-right{
+    background-color: black;
+    width: 20%;
+    height: 75px;
+    float: left;
+    position: absolute;
+    right: 25%;
+    margin-top: 75px;
+    cursor: pointer;
+}
+
+.text-button{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 50%;
+    margin-top: -0.78em;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 23px;
+}
+#two{
+    display: none;
+}
+#three{
+    display: none;
+}
+#four{
+    display: none;
+}
+#final{
+    display: none;
+}
+.back-to-basket{
+    text-align: center;
+    padding-top: 220px;
+    color: rgb(122, 121, 121);
+}
+.block{
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.timepicker{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+}
+.timepicker-hour{
+    position: absolute;
+    border: 4px solid black;
+    width: 100px;
+    height: 50px;
+    left: 0%;
+    float: left;
+}
+.timepicker-minutes{
+    position: absolute;
+    border: 4px solid black;
+    width: 100px;
+    height: 50px;
+    right: 0%;
+}
+.up{
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    cursor: pointer;
+
+}
+.down{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    cursor: pointer;
+}
+#hour{
+    position: absolute;
+    left: 20%;
+}
+#minute{
+    position: absolute;
+    left: 20%;
+}
+
+.button{
+    background-color: black;
+    width: 50%;
+    height: 75px;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin:auto;
+    top: 50%;
+    cursor: pointer;
+}
+.text-middle-button{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 35%;
+    margin-top: -0.625em;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 23px;
+}
+.time{
+    position: relative;
+    left: 50%;
+    bottom: 15%;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 23px;
+}
+#datepicker{
+	width: 250px;
+	margin: 0 auto;
+}
+.calendar{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 600px;
+}
+.button-calendar{
+    background-color: black;
+    width: 25%;
+    height: 75px;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0%;
+    cursor: pointer;
+}
