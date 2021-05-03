@@ -1,31 +1,19 @@
-class Countdown {
-  constructor (shift) {
-    this.shift = shift;
-    this.startTime = Date.now();
-    this.endTime = (new Date(this.startTime + shift * 3.6e6)).getTime();
-    this.counter = document.getElementById('countdown');
-    this.start();
-  }
-  
-  start () {
-    let range, hours, minutes, seconds, self = this;
-    this.startTime += 1000;
-    range = (this.endTime - this.startTime)/1000;
-    hours = this.zeroAdd(Math.floor( (range/(60*60)) % 24 ));
-    minutes = this.zeroAdd(Math.floor( (range/60) % 60 ));
-    seconds = this.zeroAdd(Math.floor( range % 60 ));
-
-    this.counter.innerText = `${hours}:${minutes}:${seconds}`;
-    setTimeout(function () {
-      self.start();
-    }, 1000);
-  }
-  
-  zeroAdd (digit) {
-    return (`0${digit}`).slice(-2);
-  }
-}
+/* 
+*   Let's build an Accordeon widget with structure:
+*   
+*   <div class="myAccordeon">
+*       <div class="myAccordeon__item">
+*           <div class="myAccordeon__title">
+*               <span class="myAccordeon__title--text"></span>
+*               <span class="myAccordeon__title--chevron"></span>
+*           </div>
+*           <div class="myAccordeon__content">
+*               ...
+*           </div>
+*       </div>
+*   </div>
+*/
 
 window.onload = () => {
-  const cd = new Countdown(12);
+    console.log('app started.');
 };
