@@ -1,17 +1,7 @@
 /* 
-*   Let's build an Accordeon widget with structure:
+*   Make a PLP title for product as a widget
 *   
-*   <div class="myAccordeon">
-*       <div class="myAccordeon__item">
-*           <div class="myAccordeon__title">
-*               <span class="myAccordeon__title--text"></span>
-*               <span class="myAccordeon__title--chevron"></span>
-*           </div>
-*           <div class="myAccordeon__content">
-*               ...
-*           </div>
-*       </div>
-*   </div>
+*   Use a template for rendering
 */
 
 window.onload = () => {
