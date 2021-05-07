@@ -5,5 +5,5 @@
 */
 
 window.onload = () => {
-    console.log('app started.');
+    console.log('app started.', DATABASE);
 };

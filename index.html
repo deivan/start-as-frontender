@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
 
     </div>
+
+    <script src="database.js"></script>
     <script src="app.js"></script>
     <script type="text/template" id="template">
-      <div class="plp">
+      <div class="plp" id="plp-item-{{id}}">
         <div class="plp__header">{{title}}</div>
         <div class="plp__body">
-          <img class="plp__image"></img>
+          <img class="plp__image" src="{{image}}"/>
           <div class="plp__content">
             <div class="plp__content--price">{{price}}</div>
             <div class="plp__content--quantity">
