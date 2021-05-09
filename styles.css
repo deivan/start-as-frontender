@@ -11,6 +11,7 @@ body {
   background-color: #eee;
   color: #000;
   border-radius: 3px;
+  display:flex;
 }
 
 .container.refinements {
