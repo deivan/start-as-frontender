@@ -1,0 +1,17 @@
+body, div, p, h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 800px;
+    background-color: #ddd;
+    padding:10px;
+    border-radius: 3px;
+    margin: 5% auto;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+}

@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Learn Angular application</title>
+    <title>Learn Google Maps API</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="main">
-      <my-header></my-header>
-      <div class="content">
-        <div class="content__panel"></div>
-        <div class="content__panel"></div>
-      </div>
+      <div id="map"></div>
+      <hr/>
+      <input id="address" />
+      <button id="submit">Geocode it!</button>
+      <hr/>
+      <input id="from" />
+      <input id="to" />
+      <button id="route">Let's Go!</button>
     </div>
-    <script src="js/angular.min.js"></script>
-    <script src="js/app.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLTp8kga8Fm_O1eYQ-KaWmDaAkWsR4FN8&callback=initMap"
+      async
+    ></script>
+    <script src="app.js"></script>
   </body>
 </html>
