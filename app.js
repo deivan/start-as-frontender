@@ -1,8 +1,10 @@
 'use strict';
 
+let CATALOG;
+
 $(document).ready( () => {
   console.log('app started');
-  new Catalog();
+  CATALOG = new Catalog();
 });
 
 class Catalog {
@@ -12,15 +14,6 @@ class Catalog {
       animate: 500,
       collapsible: true
     });
-    
-    this.initMap();
-    this.startCountdown();
-    this.startTwenty();
-    this.startZoom();
-  }
-  
-  initMap () {
-
   }
   
   startCountdown () {
@@ -33,7 +26,7 @@ class Catalog {
   }
   
   startTwenty() {
-     $("#twentytwenty-container").twentytwenty();
+     $("#container1").twentytwenty();
   }
   
   startZoom () {

@@ -16,6 +16,7 @@
         
         <h3>Countdown</h3>
         <div>
+          <button onclick="CATALOG.startCountdown();$(this).hide()">Start</button>
           <div id="getting-started"></div>
         </div>
         
@@ -27,7 +28,8 @@
         
         <h3>twenty twenty</h3>
         <div>
-          <div id="twentytwenty-container">
+          <button onclick="CATALOG.startTwenty();$(this).hide()">Start</button>
+          <div id="container1">
             <img src="images/1_1.jpg" />
             <img src="images/1_2.jpg" />
           </div>
@@ -35,14 +37,14 @@
         
         <h3>nano gallery</h3>
         <div>
-          <!--
-          <div id="nanogallery2" data-nanogallery2='{
+        
+      <div id="nanogallery2" data-nanogallery2='{
         "thumbnailHeight":         210, "thumbnailWidth": 210,
         "thumbnailL1GutterWidth":  90,
         "thumbnailL1GutterHeight": 90,
         "thumbnailBorderVertical": 0,
         "thumbnailBorderHorizontal": 0,
-        "itemsBaseURL":            "/start-as-frontender/",
+        "itemsBaseURL":            "./",
         "thumbnailStacks":         4,
         "thumbnailStacksRotateZ":  0.4,
         "thumbnailBuildInit2":     "thumbnail_transform-origin_50% 150%",
@@ -52,20 +54,14 @@
             <a href="images/party2.jpg" data-ngthumb="images/party2t.jpg">Party 2</a>
             <a href="images/party3.jpg" data-ngthumb="images/party3t.jpg">Party 3</a>
           </div>
-          -->
         </div>
         
         <h3>Zoom image</h3>
         <div>
+          <button onclick="CATALOG.startZoom();$(this).hide()">Start</button>
            <img id="zoom_01" src='images/small-image1.png' data-zoom-image="images/large-image1.jpg" />
         </div>
-        
-        <h3>Google Map</h3>
-        <div>
-          <div id="map">
-            <input type="text" id="map-autocomplete" />
-          </div>
-        </div>          
+                 
       </div>
 
       
@@ -78,7 +74,6 @@
     <script src="jquery.twentytwenty.js"></script>
     <script src="https://unpkg.com/nanogallery2@1.4.0/dist/jquery.nanogallery2.min.js"></script>
     <script src='jquery.elevatezoom.js'></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLdk_3l3rMgLezHljZas8olm57cbWNPEU"></script>
 
     <script src="app.js"></script>
   </body>
