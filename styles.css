@@ -7,6 +7,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    font-family: 'MateSC';
+}
+
+select {
+  font-family: 'MateSC';
+  padding: 4px;
+}
+
+@font-face {
+  font-family: 'MateSC';
+  src:url('MateSC-Regular.ttf');
 }
 
 .main-app {
@@ -48,7 +59,7 @@ body {
 .minigames__cr {
   position: relative;
   width: 600px;
-  height:400px;
+  height:420px;
   background-color:#eee;
   border-radius:10px;
 }
@@ -98,9 +109,9 @@ body {
 .minigames__cr--buttons {
   position: absolute;
   width: 100%;
-  height: 20px;
+  height: 40px;
   bottom: 10px;
-  line-height: 20px;
+  line-height: 40px;
   text-align: center;
 }
 
@@ -134,6 +145,13 @@ body {
   font-weight: 900;
 }
 
+.minigames__cr--wallet {
+  display: inline-block;
+  padding: 1px 16px;
+  border-radius: 3px;
+  border: 1px dotted #444;
+}
+
 .minigames__cr--result {
   display:none;
   position: absolute;
@@ -156,7 +174,7 @@ body {
   color: #800;
 }
 
-minigames__cr--message {
+.minigames__cr--message {
   color: #f00;
 }
 
