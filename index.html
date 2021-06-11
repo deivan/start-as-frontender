@@ -1,58 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Let's play a game</title>
+    <title>JS modules</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="module" src="app.js"></script>
   </head>
   <body>
-    <div class="main-app">
-      <div class="minigames__cr">
-        <div class="minigames__cr--title">
-          Who will win this race?  
-        </div>
-        <div class="minigames__cr--content">
-          
-        </div>
-        <div class="minigames__cr--buttons">
-          <span>Cash: </span>
-          <span id="cash"></span>
-          <span>Select your bet: </span>
-          <select id="bet">
-            <option value="1">1 coin</option>
-            <option value="3">3 coins</option>
-            <option value="5">5 coins</option>
-            <option value="10">10 coins</option>
-            <option value="20">20 coins</option>
-            <option value="50">50 coins</option>
-          </select>
-          <a class="minigames__cr--button" href="#" id="buttonStart">Let's Play!</a>
-          <a class="minigames__cr--button" href="#" id="buttonReset">Reset</a>
-        </div>
-        <div class="minigames__cr--result" id="results">
-          <div class="winner" id="result-win">You are winner!</div>
-          <div class="looser" id="result-loose">You are looser!</div>
-        </div>
-      </div>
-    </div>
-    <!--
-      <div class="minigames__cr--line">
-            <div class="minigames__cr--number">1</div>
-            <input type="radio" value="1" name="bugs" id="bet-1" />
-            <div class="minigames__cr--bug" id="bug-1" style="left:0px"></div>
-          </div>
-          <div class="minigames__cr--line">
-            <div class="minigames__cr--number">2</div>
-            <input type="radio" value="2" name="bugs" id="bet-2" />
-            <div class="minigames__cr--bug" id="bug-2" style="left:0px"></div>
-          </div>
-          <div class="minigames__cr--line">
-            <div class="minigames__cr--number">3</div>
-            <input type="radio" value="3" name="bugs" id="bet-3" />
-            <div class="minigames__cr--bug" id="bug-3" style="left:0px"></div>
-          </div>
-    -->
-    <script src="app.js"></script>
+    <div class="container" id="container"></div>
   </body>
 </html>
