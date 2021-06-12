@@ -1,0 +1,1 @@
+// Render view for Post object
