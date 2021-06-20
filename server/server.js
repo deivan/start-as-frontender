@@ -17,38 +17,64 @@ let clients = {}, names = {};
  * 
  */
 wss.on('connection', (ws, req) => {
-
+  let user = {}, status;
   console.log(req.socket)
-  //log('NEW_CONN', user.id);
-  ws.on('message', getMessage);
-  ws.on('close', close);
-  
-  function getMessage (msg) {
-    log('NEW_MSG', msg);
-    try {
+  ws.on('message', msg => {
+    status = getMessage(msg);
+    if (status) {
+      switch (status.type) {
+        case 0:
+          user.id = status.id;
+          user.name = status.message;
+          log(0, user.id)
+          break;
+        case 1:
+          broadcast(JSON.stringify({
+            type: 1,
+            message: status.message,
+            id: user.name
+          }));
 
-    } catch (e) {
-      log('PARSE_ERROR', e)
+      }
     }
-  }
-  
-  function close () {
-    log('CLOSE_CONN', user.id);
-  }
-
-  // How to send: ws.send('something');
-   
-  function log (type, text) {
-    const types = {
-      'NEW_CONN': 'New connection is here, hash is: ',
-      'NEW_MSG': 'Got message: ',
-      'CLOSE_CONN': 'Connection closed for hash ',
-      'PARSE_ERROR': 'Error happens when parsed ',
-      'SENT_MSG': 'Server send a message:'
-    };
-    console.log(`${(new Date()).toLocaleString()}: ${types[type]} ${text}`);
-  }
-
+  });
+  ws.on('close', close);
 });
+
+function broadcast(data) {
+  wss.clients.forEach(function each(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(data);
+      console.log(data)
+    }
+  });
+}
+
+function getMessage (msg) {
+  let obj = false;
+  try {
+    obj = JSON.parse(msg);
+  } catch (e) {
+    log('PARSE_ERROR', e)
+  }
+  return obj;
+}
+
+function close () {
+  //log('CLOSE_CONN', user.id);
+}
+
+// How to send: ws.send('something');
+ 
+function log (type, text) {
+  const types = {
+    'NEW_CONN': 'New connection is here, hash is: ',
+    'NEW_MSG': 'Got message: ',
+    'CLOSE_CONN': 'Connection closed for hash ',
+    'PARSE_ERROR': 'Error happens when parsed ',
+    'SENT_MSG': 'Server send a message:'
+  };
+  console.log(`${(new Date()).toLocaleString()}: ${types[type]} ${text}`);
+}
 
 console.log('Server started at 8085');
