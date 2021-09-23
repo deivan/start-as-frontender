@@ -1,19 +1,24 @@
-window.onload = function () {
+window.onload = () => {
   console.log('App started');
-  document.getElementById('link-1').addEventListener('click', showDropdown,true);
-  document.getElementById('link-2').addEventListener('click', showDropdown,true);
+  document.body.addEventListener('click', showDropdown,true);
 };
   
   
 function showDropdown (e) {
-  var m1 = document.getElementById('menu-content-1');
-  var m2 = document.getElementById('menu-content-2');
+  const links = {
+    'link-1': 'menu-content-1',
+    'link-2': 'menu-content-2',
+    'link-3': 'chat-window-content'
+  };
+  
   console.log('event',e.target.id);
-  if (e.target.id === 'link-1') {
-    if(m1.classList.contains('menu-content--show')) {
-      m1.classList.remove('menu-content--show');
+  
+  if (links[e.target.id] !== undefined) {
+    let elem = document.getElementById(links[e.target.id]);
+    if(elem.classList.contains('menu-content--show')) {
+      elem.classList.remove('menu-content--show');
     } else {
-      m1.classList.add('menu-content--show');
+      elem.classList.add('menu-content--show');
     }
   }
 }
