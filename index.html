@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Learning pseudoclasses and pseudoelements</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Pseudo class :hover</h1>
+        <p class="hovered">Try to hover it and run away</p>
+        <p>There you will try</p>
+        <hr/>
+
+        <h1>Pseudo class :focus</h1>
+        <p>This uses in the input tags like this</p>
+        <div class="input__element">
+            <label>Focused:</label>
+            <input class="focused" />
+        </div>
+        <div class="input__element">
+            <label>One time again:</label>
+            <input />
+        </div>
+        <hr/>
+
+        <h1>Pseudo class :checked</h1>
+        <p>Works with clickable input elements</p>
+        <div class="input__element">
+            <label>Check it:</label>
+            <input type="checkbox" />
+        </div>
+        <hr/>
+
+        <h1>Validation pseudo classes :valid, :invalid</h1>
+        <p>Works with inputs and forms</p>
+        <div class="input__element">
+            <label>Only email will be green:</label>
+            <input type="email" />
+        </div>
+        <hr/>
+
+        <h1>How to process disabled state</h1>
+        <div class="input__element">
+            <label>Enabled input:</label>
+            <input />
+            <label>Enabled button:</label>
+            <button>Button</button>
+        </div>
+        <div class="input__element">
+            <label>Disabled input:</label>
+            <input disabled />
+            <label>Disabled button:</label>
+            <button disabled>Button</button>
+        </div>
+        <hr/>
+
+        <h1>Pseudoclass :first</h1>
+        <div class="column">
+            <p>What is love?..</p>
+            <p>Baby don't hurt me,</p>
+            <p>Don't hurt me,</p>
+            <p>No more!</p>
+        </div>
+        <hr/>
+
+        <h1>Pseudoclass :nth-of-type</h1>
+        <p>Select every element bu number rule from set of same elements</p>
+        <ul>
+            <li>line #1</li>
+            <li>line #2</li>
+            <li>line #3</li>
+            <li>line #4</li>
+            <li>line #5</li>
+            <li>line #6</li>
+            <li>line #7</li>
+            <li>line #8</li>
+        </ul>
+        <hr/>
+        <hr/>
+
+        <h1>Pseudo element ::first-letter, ::selection</h1>
+        <p class="first__letter selection1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut maiores labore impedit quas sed sint illo rerum distinctio molestiae deleniti est dolore quis officiis, cum mollitia quibusdam alias accusantium. Ipsum.</p>
+        <p class="first__letter selection2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, molestias similique eligendi ex veniam facere explicabo labore accusantium nihil ea pariatur eveniet hic placeat, aliquid iste ratione veritatis sequi ut.</p>
+    </body>
+</html>

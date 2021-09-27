@@ -1,0 +1,76 @@
+/*    Your classes shoul br there     */
+
+.hovered:hover {
+    font-weight:900;
+    color: #800;
+}
+
+.input__element {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ddd;
+}
+
+.focused:focus {
+    box-shadow: 6px 6px 4px 2px rgba(0, 0, 255, .2);
+}
+
+.blured {
+    color: rgba(180,180,180,.5);
+}
+
+:checked {
+    margin-left: 20px;
+}
+
+input[type="email"]:valid {
+    background-color: #ddffdd;
+}
+
+input[type="email"]:invalid {
+    background-color: #ffdddd;
+}
+
+/*
+li:nth-of-type(1) { color: #080; }
+*/
+
+/*
+li:nth-of-type(2n) { color: magenta; }
+*/
+/*
+.input__element input:disabled,
+.input__element button:disabled {
+    border: 1px dotted rgba(255,0,0,0.5); 
+}*/
+
+.column {
+    width: 300px;
+}
+.column p {
+    padding:10px;
+}/*
+.column p:first-child {
+    color: lime;
+    background-color: black;
+    padding: 5px;
+}*/
+
+.first__letter {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*
+.first__letter::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: brown;
+}*/
+.selection1::selection {
+    color: gold;
+    background: red;
+}
+.selection2::selection {
+    color: white;
+    background: blue;
+}
