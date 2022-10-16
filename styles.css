@@ -1,0 +1,28 @@
+body {
+	padding: 0;
+	margin: 0;
+	color: #444;
+}
+
+@media screen {
+	body {
+		background-color: aquamarine;
+	}
+	.container {
+		width: 800px;
+		margin: 0 auto;
+	}
+	p {
+		margin-bottom: 48px;
+	}
+}
+
+@media print {
+	body {
+		width: 21cm;
+		height: 29.7cm;
+		color: #000;
+		font-family: 'Courier New', Courier, monospace;
+		background-color: sandybrown;
+	}
+}
