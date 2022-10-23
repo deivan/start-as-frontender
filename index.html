@@ -3,45 +3,28 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>An example about Form, Inputs, Validations</title>
+        <title>Canvas! Canvas!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <style>
+            .container {
+                width: 600px;
+                margin: 0 auto;
+            }
+            canvas {
+                border: 1px solid #080;
+            }
+        </style>
         <div class="container">
-            <form>
-                <div class="input-field">
-                    <label>First name:</label>
-                    <input name="firstname" />
-                </div>
-                <div class="input-field">
-                    <label>Last name:</label>
-                    <input type="text" name="lastname" placeholder="Last name" />
-                </div>
-                <div class="input-field">
-                    <label>Phone number:</label>
-                    <input type="phone" name="phonenumber" />
-                </div>
-                <div class="input-field">
-                    <label>Email:</label>
-                    <input type="email" name="email" />
-                </div>
-                <div class="input-field">
-                    <label>Password:</label>
-                    <input type="password" name="password" />
-                </div>
-                <div class="input-field">
-                    <label>You agree to land me $1000:</label>
-                    <input type="checkbox" name="agreement" />
-                </div>
-                <div class="input-field">
-                    <label>Your age:</label>
-                    <input type="number" name="age" />
-                </div>
-                <input type="hidden" name="secret" value="I'll calculate you by IP and kick your ass!" />
-                <input type="submit" value="Register" />
-            </form>
+            <canvas id="canvas1" width="600" height="400"></canvas>
         </div>
+        <script>
+            window.onload = () => {
+                const canvas = document.getElementById('canvas1');
+                const ctx = canvas.getContext('2d');
+            };
+        </script>
     </body>
 </html>
