@@ -1,28 +1,28 @@
 body {
 	padding: 0;
 	margin: 0;
-	color: #444;
+	background-color: blanchedalmond;
+	color: #004;
 }
 
-@media screen {
-	body {
-		background-color: aquamarine;
-	}
-	.container {
-		width: 800px;
-		margin: 0 auto;
-	}
-	p {
-		margin-bottom: 48px;
-	}
+.container {
+	width: 640px;
+	padding: 16px;
+	background-color: aliceblue;
+	margin: 16px auto;
+	border-radius: 6px;
 }
 
-@media print {
-	body {
-		width: 21cm;
-		height: 29.7cm;
-		color: #000;
-		font-family: 'Courier New', Courier, monospace;
-		background-color: sandybrown;
-	}
+.input-field {
+	width: 100%;
+	min-height: 32px;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	grid-gap: 4px;
+	margin-bottom: 4px;
+}
+.input-field label {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
