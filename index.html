@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        console.log(`1: I'm in the HEAD`)
+    </script>
   </head>
   <body>
-    <div class="main-vidget" id="app-core"></div>
-    <div class="main-vidget" id="app-core-a"></div>
-    <div class="main-vidget" id="app-core-b"></div>
+    <script>
+        window.onload = () => console.log(`2: I'm in the body`)
+    </script>
+    <div class="container" id="container"></div>
     <script src="app.js"></script>
   </body>
 </html>

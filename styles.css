@@ -1,59 +1,14 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: navy;
+  background-color: rgb(180, 210, 230);
   color: #000;
   font-size: 16px;
 }
 
-.main-vidget{
-  width: 550px;
-  height: 400px;
-  position: relative;
-  margin: 50px auto;
-  border-radius: 10px;
-  background-color: #fff;
-}
-
-.className {
-  color:red;
-  padding: 10px 30px;
-  display:inline-block;
-}
-
-.image {
-  width: 250px;
-  height: 250px;
-  float: left;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-.price {
-  display: inline-block;
-  float: left;
-  margin-left: 20px;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 36px;
-  font-weight: 900;
-  color: red;
-  text-align: center;
-}
-
-.content {
-  width: 250px;
-  height: 360px;
-  float: right;
-  border: 1px dotted #888;
-}
-
-.content ul {
-  width:100%;
-  color: #888;
-}
-
-.content ul li {
-  
+.container {
+  width: 640px;
+  padding: 16px;
+  margin: 0 auto;
+  border: 1px solid black;
 }
