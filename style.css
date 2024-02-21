@@ -22,3 +22,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
 .footer {
 
 }
+
+
+.sprite {
+	background: url('pngegg.png') no-repeat 0 0;
+	background-size: 200px 1200px;
+	width: 200px;
+	height: 1200px;
+}
