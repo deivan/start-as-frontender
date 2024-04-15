@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-and-Drop</title>
+</head>
+<body>
+    <style>
+        .container {
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: #ddd;
+            color: #444;
+        }
+        .container.hidden {
+            display: none;
+        }
+        .example-parent {
+            border: 2px solid #DFA612;
+            color: black;
+            display: flex;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .example-origin {
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        .example-draggable {
+            background-color: #4AAE9B;
+            font-weight: normal;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .example-dropzone {
+            background-color: #6DB65B;
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <div class="container">
+        <div class="example-parent">
+            <h1>To-do list</h1>
+            <div class="example-origin">
+              To-do
+              <div
+                id="draggable-1"
+                class="example-draggable"
+                draggable="true"
+              >
+                thing 1
+              </div>
+              <div
+                id="draggable-2"
+                class="example-draggable"
+                draggable="true"
+              >
+                thing 2
+              </div>
+              <div
+                id="draggable-3"
+                class="example-draggable"
+                draggable="true"
+              >
+                thing 3
+              </div>
+              <div
+                id="draggable-4"
+                class="example-draggable"
+                draggable="true"
+              >
+                thing 4
+              </div>
+            </div>
+          
+            <div
+              class="example-dropzone"
+            >
+              Done
+            </div>
+          </div>
+    </div>
+    <div class="container hidden">
+        <canvas id="canvas" width="900" height="360"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
