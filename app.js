@@ -1,8 +1,8 @@
 // a base config should be there
 const CONFIG = {
-
-};
-
+  MINIMAL_BET: 1,
+  TIME_STEP: 80,
+}
 window.onload = () => {
 
 };
