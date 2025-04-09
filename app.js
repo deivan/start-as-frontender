@@ -1,7 +1,9 @@
-const MINIMAL_BET = 1;
-const SPEED = 80;
-const END_LINE = 436;
-const CASH = 50;
+const CONFIG = {
+  MINIMAL_BET: 1,
+  TIME_STEP: 80,
+  END_LINE: 436,
+  CASH: 50
+}
 
 window.onload = () => {
     new RaceGame();
@@ -10,7 +12,7 @@ window.onload = () => {
 class RaceGame {
     constructor() {
         this.lines = 3;
-        this.cash = CASH;
+        this.cash = CONFIG.CASH;
         this.cashUI = document.getElementById('cash')
         this.createUI();
         this.addEvents();
@@ -43,7 +45,7 @@ class RaceGame {
 
         document.getElementById('buttonReset')
             .addEventListener('click', () => {
-                document.getElementById('bet').value = MINIMAL_BET;
+                document.getElementById('bet').value = CONFIG.MINIMAL_BET;
                 bets.forEach(item => {
                     item.checked = false;
                 });
@@ -79,7 +81,7 @@ class RaceGame {
             this.bugs.forEach((item, i) => {
                 let x = parseInt(item.style.left);
                 x += this.speeds[i];
-                if(x > END_LINE) {
+                if(x > CONFIG.END_LINE) {
                     finish = i + 1;
                 } else {
                     item.style.left = `${x}px`;
@@ -90,7 +92,7 @@ class RaceGame {
             } else {
                 this.run();
             }
-        }, SPEED);
+        }, TIME_STEP);
     }
 
     getSpeeds() {
