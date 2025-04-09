@@ -17,6 +17,16 @@ class RaceGame {
     // which will be take a part into game processing
   }
 
+  createLine(i) {
+    return (`
+      <div class="minigames__cr--line">
+        <div class="minigames__cr--number">${i}</div>
+        <input type="radio" value="${i}" name="bugs" id="bet-${i}" />
+        <div class="minigames__cr--bug" id="bug-${i}" style="left:0px"></div>
+      </div>
+    `);
+  }
+
   addEvents() {
     // there we should to prepare all clicks to buttons
   }
